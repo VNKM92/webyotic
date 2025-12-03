@@ -5,14 +5,15 @@ use App\Http\Controllers\HomeController;
 use App\Http\Livewire\Frontend\HomeSlider;
 use App\Http\Livewire\Frontend\HomeBlogList;
 
+require __DIR__.'/auth.php';
 
 Route::get('/', function () {
 return view('welcome');
 });
 
-// Route::middleware(['auth'])->group(function () {
-// // protected user routes
-// });
+Route::middleware(['auth'])->group(function () {
+// protected user routes
+});
 
 
 // Route::view('/', 'welcome');
@@ -25,13 +26,11 @@ Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');
 
-require __DIR__.'/auth.php';
 
 
 // Admin routes
 Route::prefix('admin')->middleware(['auth','admin'])->group(function() {
-
-    Route::view('dashboard', 'dashboard')->name('dashboard');
+  Route::view('dashboard', 'dashboard')->name('dashboard');
 
     Route::get('/', \App\Http\Livewire\Admin\Dashboard::class)->name('admin.dashboard');
 

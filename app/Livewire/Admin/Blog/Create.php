@@ -1,6 +1,4 @@
 <?php
-
-
 namespace App\Http\Livewire\Admin\Blog;
 
 

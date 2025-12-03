@@ -1,3 +1,6 @@
+<x-app-layout>
+    <x-slot name="header">
+
 <div class="space-y-8">
     <!-- Welcome Section -->
     <div class="bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg p-8 text-white shadow-lg">
@@ -140,3 +143,6 @@
         </div>
     </div>
 </div>
+
+</x-slot>
+</x-app-layout>

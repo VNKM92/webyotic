@@ -3,38 +3,27 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
-use App\Models\User;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
-    public function index()
+    public function about()
     {
-        $users = User::latest()->paginate(10);
-        return view('admin.users.index', compact('users'));
+        return view('frontend.about');
     }
 
-    public function edit(User $user)
+    public function contact()
     {
-        return view('admin.users.edit', compact('user'));
+        return view('frontend.contact');
     }
 
-    public function update(Request $request, User $user)
+    public function blog()
     {
-        $request->validate([
-            'name' => 'required',
-            'role' => 'required'
-        ]);
-
-        $user->update($request->only('name', 'role'));
-
-        return redirect()->route('admin.users.index')->with('success', 'User updated');
+        return view('frontend.blog');
     }
 
-    public function destroy(User $user)
+    public function services()
     {
-        $user->delete();
-
-        return back()->with('success', 'User removed');
+        return view('frontend.services');
     }
 }

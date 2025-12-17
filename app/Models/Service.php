@@ -5,31 +5,20 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model
+class Service extends Model
 {
-    /** @use HasFactory<\Database\Factories\PostFactory> */
     use HasFactory;
 
     protected $fillable = [
         'title',
         'slug',
-        'body',
+        'icon',
         'image',
-        'category_id',
-        'user_id',
+        'short_description',
+        'description',
         'seo_title',
         'seo_description',
         'seo_keywords',
         'focus_keyword',
     ];
-
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
-
-    public function category()
-    {
-        return $this->belongsTo(Category::class);
-    }
 }

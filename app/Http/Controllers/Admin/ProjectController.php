@@ -27,6 +27,9 @@ class ProjectController extends Controller
         ]);
 
         $data = $request->all();
+        if (isset($data['tags']) && is_string($data['tags'])) {
+            $data['tags'] = array_filter(array_map('trim', explode(',', $data['tags'])));
+        }
         if (empty($data['slug'])) {
             $data['slug'] = Str::slug($data['title']);
         }
@@ -48,7 +51,11 @@ class ProjectController extends Controller
             'slug' => 'required|unique:projects,slug,' . $project->id,
         ]);
 
-        $project->update($request->all());
+        $data = $request->all();
+        if (isset($data['tags']) && is_string($data['tags'])) {
+            $data['tags'] = array_filter(array_map('trim', explode(',', $data['tags'])));
+        }
+        $project->update($data);
 
         return redirect()->route('admin.projects.index')->with('success', 'Project updated successfully.');
     }

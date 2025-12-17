@@ -12,6 +12,7 @@
     @if(!empty($seo_keywords))
     <meta name="keywords" content="{{ $seo_keywords }}">
     @endif
+    <link rel="alternate" type="application/rss+xml" title="{{ $seo_title ?? config('app.name', 'Webyotic') }} RSS Feed" href="{{ route('feed') }}">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

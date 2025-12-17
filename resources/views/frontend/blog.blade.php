@@ -32,10 +32,10 @@
                     <div class="grid grid-cols-1 md:grid-cols-12 gap-0">
                         <!-- Image -->
                         <div class="md:col-span-5 relative overflow-hidden h-64 md:h-auto">
-                            <img loading="lazy" src="{{ $post['image'] }}" alt="{{ $post['title'] }}" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                            <img loading="lazy" src="{{ $post->image ?? 'https://images.unsplash.com/photo-1499750310159-5b600aaf0320?auto=format&fit=crop&w=800&q=80' }}" alt="{{ $post->title }}" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute top-4 left-4">
                                 <span class="bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm text-slate-800 dark:text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">
-                                    {{ $post['category'] }}
+                                    {{ optional($post->category)->name ?? 'Uncategorized' }}
                                 </span>
                             </div>
                         </div>
@@ -45,28 +45,24 @@
                             <div class="flex items-center text-sm text-slate-500 dark:text-gray-400 mb-3 space-x-4">
                                 <span class="flex items-center">
                                     <svg class="w-4 h-4 mr-1.5 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                                    {{ $post['date'] }}
+                                    {{ $post->created_at?->format('M d, Y') }}
                                 </span>
                                 <span class="flex items-center">
                                     <svg class="w-4 h-4 mr-1.5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
-                                    {{ $post['author'] }}
-                                </span>
-                                <span class="flex items-center">
-                                    <svg class="w-4 h-4 mr-1.5 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"/></svg>
-                                    {{ $post['comments'] }} Comments
+                                    {{ optional($post->user)->name ?? 'Admin' }}
                                 </span>
                             </div>
                             
                             <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-sky-600 transition-colors">
-                                <a href="{{ route('blog.show', $post['slug']) }}">{{ $post['title'] }}</a>
+                                <a href="{{ route('blog.show', $post->slug) }}">{{ $post->title }}</a>
                             </h2>
                             
                             <p class="text-slate-600 dark:text-gray-300 mb-6 line-clamp-2">
-                                {{ $post['excerpt'] }}
+                                {{ \Illuminate\Support\Str::limit(strip_tags($post->body), 160) }}
                             </p>
                             
                             <div class="flex items-center justify-between mt-auto">
-                                <a href="{{ route('blog.show', $post['slug']) }}" class="inline-flex items-center font-semibold text-sky-600 dark:text-sky-400 hover:text-sky-700 transition-colors">
+                                <a href="{{ route('blog.show', $post->slug) }}" class="inline-flex items-center font-semibold text-sky-600 dark:text-sky-400 hover:text-sky-700 transition-colors">
                                     Read Article
                                     <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                 </a>
@@ -84,13 +80,7 @@
                 
                 <!-- Pagination Placeholder -->
                 <div class="flex justify-center mt-12">
-                    <nav class="inline-flex rounded-md shadow-sm">
-                        <a href="#" class="px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 rounded-l-md dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400">Previous</a>
-                        <a href="#" class="px-4 py-2 border-t border-b border-gray-300 bg-sky-50 text-sm font-medium text-sky-600 dark:bg-gray-700 dark:border-gray-600 dark:text-white">1</a>
-                        <a href="#" class="px-4 py-2 border-t border-b border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400">2</a>
-                        <a href="#" class="px-4 py-2 border-t border-b border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400">3</a>
-                        <a href="#" class="px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 rounded-r-md dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400">Next</a>
-                    </nav>
+                    {{ $posts->links() }}
                 </div>
             </div>
             
@@ -143,18 +133,20 @@
                 <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-gray-700">
                     <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4 border-l-4 border-sky-500 pl-3">Recent Posts</h3>
                     <div class="space-y-4">
-                        @foreach(array_slice($posts, 0, 3) as $post)
+                        @foreach($posts as $recent)
+                        @if($loop->index < 3)
                         <div class="flex space-x-4 group">
                             <div class="flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
-                                <img loading="lazy" src="{{ $post['image'] }}" alt="{{ $post['title'] }}" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
+                                <img loading="lazy" src="{{ $recent->image ?? 'https://images.unsplash.com/photo-1499750310159-5b600aaf0320?auto=format&fit=crop&w=200&q=80' }}" alt="{{ $recent->title }}" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">
                             </div>
                             <div>
                                 <h4 class="text-sm font-semibold text-slate-900 dark:text-white line-clamp-2 mb-1 group-hover:text-sky-600 transition-colors">
-                                    <a href="{{ route('blog.show', $post['slug']) }}">{{ $post['title'] }}</a>
+                                    <a href="{{ route('blog.show', $recent->slug) }}">{{ $recent->title }}</a>
                                 </h4>
-                                <span class="text-xs text-slate-500 dark:text-gray-400">{{ $post['date'] }}</span>
+                                <span class="text-xs text-slate-500 dark:text-gray-400">{{ $recent->created_at?->format('M d, Y') }}</span>
                             </div>
                         </div>
+                        @endif
                         @endforeach
                     </div>
                 </div>

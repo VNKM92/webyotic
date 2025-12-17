@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\TestimonialController as AdminTestimonialControll
 use App\Http\Controllers\Admin\AdController as AdminAdController;
 use App\Http\Controllers\Admin\SettingController as AdminSettingController;
 use App\Http\Controllers\Admin\PostController as AdminPostController;
+use App\Http\Controllers\Frontend\SitemapController;
 
 // Frontend Routes
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -22,6 +23,9 @@ Route::get('/blog/{slug}', [PageController::class, 'blogShow'])->name('blog.show
 Route::get('/services', [PageController::class, 'services'])->name('services');
 Route::get('/gallery', [PageController::class, 'gallery'])->name('gallery');
 Route::get('/testimonials', [PageController::class, 'testimonials'])->name('testimonials');
+Route::get('/sitemap.xml', [SitemapController::class, 'sitemap'])->name('sitemap');
+Route::get('/feed', [SitemapController::class, 'rss'])->name('feed');
+Route::get('/rss.xml', [SitemapController::class, 'rss'])->name('rss');
 
 // Auth Routes
 Route::middleware('auth')->group(function () {

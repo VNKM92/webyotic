@@ -1,6 +1,13 @@
 @extends('frontend.layouts.app')
 
 @section('content')
+@if(!empty($page?->content))
+<section class="py-12 bg-white">
+    <div class="container mx-auto px-4 max-w-screen-xl prose prose-slate">
+        {!! $page->content !!}
+    </div>
+</section>
+@endif
 <!-- Hero Section (Slider) -->
 <section class="relative bg-white dark:bg-gray-900 overflow-hidden">
     <div class="absolute inset-0 z-0">

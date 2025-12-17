@@ -1,6 +1,13 @@
 @extends('frontend.layouts.app')
 
 @section('content')
+@if(!empty($page?->content))
+<section class="py-12 bg-white">
+    <div class="container mx-auto px-4 max-w-screen-xl prose prose-slate">
+        {!! $page->content !!}
+    </div>
+</section>
+@endif
 <section class="bg-white dark:bg-gray-900">
     <div class="py-12 lg:py-20 px-4 mx-auto max-w-screen-xl">
         <div class="mx-auto max-w-screen-md text-center mb-10 lg:mb-16">

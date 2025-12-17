@@ -4,14 +4,14 @@
 <!-- Single Blog Hero Section -->
 <div class="relative bg-slate-900 pt-32 pb-20 px-4">
     <div class="absolute inset-0 overflow-hidden">
-        <img src="{{ $post->image }}" alt="{{ $post->title }}" class="w-full h-full object-cover opacity-20 blur-sm">
+        <img src="{{ $post->image ?? 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=1200&q=80' }}" alt="{{ $post->title }}" class="w-full h-full object-cover opacity-20 blur-sm">
         <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent"></div>
     </div>
     <div class="container mx-auto max-w-screen-xl relative z-10">
         <div class="max-w-4xl">
             <div class="flex flex-wrap gap-3 mb-6">
                 <span class="bg-sky-500/20 text-sky-300 border border-sky-500/30 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">
-                    {{ $post->category }}
+                    {{ optional($post->category)->name ?? 'Uncategorized' }}
                 </span>
                 <span class="bg-slate-700/50 text-slate-300 border border-slate-600/30 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider flex items-center">
                     <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
@@ -24,20 +24,20 @@
             <div class="flex items-center text-slate-300 space-x-6">
                 <div class="flex items-center">
                     <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center mr-3 text-white font-bold text-lg">
-                        {{ substr($post->author, 0, 1) }}
+                        {{ substr(optional($post->user)->name ?? 'A', 0, 1) }}
                     </div>
                     <div>
-                        <p class="text-sm font-semibold text-white">{{ $post->author }}</p>
+                        <p class="text-sm font-semibold text-white">{{ optional($post->user)->name ?? 'Admin' }}</p>
                         <p class="text-xs text-slate-400">SEO Specialist</p>
                     </div>
                 </div>
                 <div class="flex items-center text-sm">
                     <svg class="w-5 h-5 mr-2 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                    {{ $post->date }}
+                    {{ $post->created_at?->format('M d, Y') }}
                 </div>
                 <div class="flex items-center text-sm">
                     <svg class="w-5 h-5 mr-2 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"/></svg>
-                    {{ $post->comments_count }} Comments
+                    Comments
                 </div>
             </div>
         </div>
@@ -52,16 +52,19 @@
             <div class="col-span-12 lg:col-span-9">
                 <article class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-slate-100 dark:border-gray-700 overflow-hidden mb-12">
                     <div class="p-8 md:p-12 prose dark:prose-invert max-w-none prose-lg prose-headings:font-bold prose-headings:text-slate-900 dark:prose-headings:text-white prose-a:text-sky-600 hover:prose-a:text-sky-700 prose-img:rounded-xl">
-                        {!! $post->content !!}
+                        {!! $post->body !!}
                     </div>
                     
                     <!-- Tags & Share -->
                     <div class="px-8 md:px-12 py-6 bg-slate-50 dark:bg-gray-700/30 border-t border-slate-100 dark:border-gray-700 flex flex-col md:flex-row items-center justify-between gap-4">
                         <div class="flex flex-wrap gap-2">
                             <span class="text-sm font-semibold text-slate-500 dark:text-gray-400 mr-2">Tags:</span>
-                            @foreach($post->tags as $tag)
-                            <a href="#" class="text-xs bg-white dark:bg-gray-600 border border-slate-200 dark:border-gray-500 rounded-full px-3 py-1 text-slate-600 dark:text-gray-200 hover:bg-sky-50 hover:text-sky-600 hover:border-sky-200 transition-colors">#{{ $tag }}</a>
-                            @endforeach
+                            @if(optional($post->category)->name)
+                            <a href="#" class="text-xs bg-white dark:bg-gray-600 border border-slate-200 dark:border-gray-500 rounded-full px-3 py-1 text-slate-600 dark:text-gray-200 hover:bg-sky-50 hover:text-sky-600 hover:border-sky-200 transition-colors">#{{ $post->category->name }}</a>
+                            @endif
+                            @if(!empty($post->focus_keyword))
+                            <a href="#" class="text-xs bg-white dark:bg-gray-600 border border-slate-200 dark:border-gray-500 rounded-full px-3 py-1 text-slate-600 dark:text-gray-200 hover:bg-sky-50 hover:text-sky-600 hover:border-sky-200 transition-colors">#{{ $post->focus_keyword }}</a>
+                            @endif
                         </div>
                         <div class="flex items-center space-x-3">
                             <span class="text-sm font-semibold text-slate-500 dark:text-gray-400">Share:</span>
@@ -146,8 +149,8 @@
 
                 <!-- Author Bio -->
                 <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-gray-700 text-center">
-                    <img src="https://i.pravatar.cc/150?img=32" alt="{{ $post->author }}" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-sky-100 dark:border-sky-900">
-                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">{{ $post->author }}</h3>
+                    <img src="https://i.pravatar.cc/150?img=32" alt="{{ optional($post->user)->name ?? 'Admin' }}" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-sky-100 dark:border-sky-900">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">{{ optional($post->user)->name ?? 'Admin' }}</h3>
                     <p class="text-sm text-sky-600 dark:text-sky-400 mb-4">SEO Specialist</p>
                     <p class="text-slate-600 dark:text-gray-300 text-sm mb-4">Passionate about helping businesses grow through organic search strategies and content marketing.</p>
                     <div class="flex justify-center space-x-3">

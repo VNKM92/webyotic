@@ -36,6 +36,11 @@ class PostController extends Controller
             'body' => $request->body,
             'category_id' => $request->category_id,
             'user_id' => auth()->id(),
+            'image' => $request->image,
+            'seo_title' => $request->seo_title,
+            'seo_description' => $request->seo_description,
+            'seo_keywords' => $request->seo_keywords,
+            'focus_keyword' => $request->focus_keyword,
         ]);
 
         return redirect()->route('admin.posts.index')->with('success', 'Post created');
@@ -59,6 +64,11 @@ class PostController extends Controller
             'slug' => Str::slug($request->title),
             'body' => $request->body,
             'category_id' => $request->category_id,
+            'image' => $request->image,
+            'seo_title' => $request->seo_title,
+            'seo_description' => $request->seo_description,
+            'seo_keywords' => $request->seo_keywords,
+            'focus_keyword' => $request->focus_keyword,
         ]);
 
         return redirect()->route('admin.posts.index')->with('success', 'Updated');

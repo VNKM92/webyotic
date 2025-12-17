@@ -50,6 +50,12 @@
                         <a href="{{ route('services') }}" class="block py-2 px-3 {{ request()->routeIs('services') ? 'text-white bg-sky-600 md:bg-transparent md:text-sky-600' : 'text-slate-900 hover:bg-slate-100 md:hover:bg-transparent md:hover:text-sky-600' }} rounded md:p-0 transition-colors">Services</a>
                     </li>
                     <li>
+                        <a href="{{ route('gallery') }}" class="block py-2 px-3 {{ request()->routeIs('gallery') ? 'text-white bg-sky-600 md:bg-transparent md:text-sky-600' : 'text-slate-900 hover:bg-slate-100 md:hover:bg-transparent md:hover:text-sky-600' }} rounded md:p-0 transition-colors">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('testimonials') }}" class="block py-2 px-3 {{ request()->routeIs('testimonials') ? 'text-white bg-sky-600 md:bg-transparent md:text-sky-600' : 'text-slate-900 hover:bg-slate-100 md:hover:bg-transparent md:hover:text-sky-600' }} rounded md:p-0 transition-colors">Testimonials</a>
+                    </li>
+                    <li>
                         <a href="{{ route('blog') }}" class="block py-2 px-3 {{ request()->routeIs('blog') ? 'text-white bg-sky-600 md:bg-transparent md:text-sky-600' : 'text-slate-900 hover:bg-slate-100 md:hover:bg-transparent md:hover:text-sky-600' }} rounded md:p-0 transition-colors">Blog</a>
                     </li>
                     <li>
@@ -98,8 +104,10 @@
                         <ul class="text-slate-400 font-medium space-y-3">
                             <li><a href="{{ route('home') }}" class="hover:text-sky-400 transition-colors">Home</a></li>
                             <li><a href="{{ route('about') }}" class="hover:text-sky-400 transition-colors">About Us</a></li>
-                            <li><a href="{{ route('blog') }}" class="hover:text-sky-400 transition-colors">Blog</a></li>
                             <li><a href="{{ route('services') }}" class="hover:text-sky-400 transition-colors">Services</a></li>
+                            <li><a href="{{ route('gallery') }}" class="hover:text-sky-400 transition-colors">Portfolio</a></li>
+                            <li><a href="{{ route('testimonials') }}" class="hover:text-sky-400 transition-colors">Testimonials</a></li>
+                            <li><a href="{{ route('blog') }}" class="hover:text-sky-400 transition-colors">Blog</a></li>
                         </ul>
                     </div>
                     <div>

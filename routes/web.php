@@ -26,7 +26,10 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 Route::get('/blog', [PageController::class, 'blog'])->name('blog');
+Route::get('/blog/{slug}', [PageController::class, 'blogShow'])->name('blog.show');
 Route::get('/services', [PageController::class, 'services'])->name('services');
+Route::get('/gallery', [PageController::class, 'gallery'])->name('gallery');
+Route::get('/testimonials', [PageController::class, 'testimonials'])->name('testimonials');
 // Route::post('/contact-submit', [PageController::class, 'contactSubmit'])->name('contact.submit');
 
 

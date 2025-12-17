@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Webyotic') }}</title>
+    <title>{{ $seo_title ?? config('app.name', 'Webyotic') }}</title>
+    @if(!empty($seo_description))
+    <meta name="description" content="{{ $seo_description }}">
+    @endif
+    @if(!empty($seo_keywords))
+    <meta name="keywords" content="{{ $seo_keywords }}">
+    @endif
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,6 +27,7 @@
 </head>
 <body class="font-sans antialiased text-slate-800 bg-slate-50">
     
+    {!! optional(\App\Models\Ad::where('is_active', true)->where('location', 'header_top')->first())->code !!}
     <!-- Navbar -->
     <nav class="bg-white/90 backdrop-blur-md fixed w-full z-50 top-0 start-0 border-b border-slate-100 shadow-sm transition-all duration-300">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -149,6 +156,7 @@
             </div>
         </div>
     </footer>
+    {!! optional(\App\Models\Ad::where('is_active', true)->where('location', 'footer_top')->first())->code !!}
     
     <script>
         // Simple script for mobile menu toggle

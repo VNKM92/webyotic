@@ -1,6 +1,12 @@
 @extends('frontend.layouts.app')
 
 @section('content')
+@if(isset($page) && !empty($page->content))
+<section class="py-12 bg-white">
+    <div class="container mx-auto px-4 max-w-screen-xl prose prose-slate">
+        {!! $page->content !!}
+    </div>
+@endif
 <!-- Services Hero Section -->
 <section class="relative bg-slate-900 overflow-hidden py-24 lg:py-32">
     <div class="absolute inset-0 z-0">
@@ -22,6 +28,22 @@
 <!-- Main Services Grid -->
 <section class="py-20 bg-slate-50 dark:bg-gray-900">
     <div class="container mx-auto px-4 max-w-screen-xl">
+        @if(isset($services) && $services->count())
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            @foreach($services as $service)
+            <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-slate-100 dark:border-gray-700 hover:border-sky-500 dark:hover:border-sky-500 transition-all duration-300 group hover:-translate-y-2">
+                <div class="w-14 h-14 bg-sky-100 dark:bg-sky-900 rounded-xl flex items-center justify-center mb-6 text-sky-600 dark:text-sky-300 group-hover:bg-sky-600 group-hover:text-white transition-colors">
+                    <span class="text-xl">{{ $service->icon }}</span>
+                </div>
+                <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">{{ $service->title }}</h3>
+                <p class="text-slate-600 dark:text-gray-400 mb-6">{{ $service->short_description }}</p>
+                @if(!empty($service->image))
+                <img src="{{ $service->image }}" alt="{{ $service->title }}" class="rounded-lg shadow mt-4">
+                @endif
+            </div>
+            @endforeach
+        </div>
+        @endif
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
             <!-- Service 1: SEO -->

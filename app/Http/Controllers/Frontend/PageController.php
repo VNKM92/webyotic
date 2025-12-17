@@ -4,17 +4,29 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Page;
+use App\Models\Service;
+use App\Models\Project;
+use App\Models\Testimonial;
 
 class PageController extends Controller
 {
     public function about()
     {
-        return view('frontend.about');
+        $page = Page::where('template', 'about')->first();
+        $seo_title = $page->seo_title ?? null;
+        $seo_description = $page->seo_description ?? null;
+        $seo_keywords = $page->seo_keywords ?? null;
+        return view('frontend.about', compact('page', 'seo_title', 'seo_description', 'seo_keywords'));
     }
 
     public function contact()
     {
-        return view('frontend.contact');
+        $page = Page::where('template', 'contact')->first();
+        $seo_title = $page->seo_title ?? null;
+        $seo_description = $page->seo_description ?? null;
+        $seo_keywords = $page->seo_keywords ?? null;
+        return view('frontend.contact', compact('page', 'seo_title', 'seo_description', 'seo_keywords'));
     }
 
     public function blog()
@@ -63,7 +75,8 @@ class PageController extends Controller
             ]
         ];
 
-        return view('frontend.blog', compact('posts'));
+        $seo_title = 'Blog';
+        return view('frontend.blog', compact('posts', 'seo_title'));
     }
 
     public function blogShow($slug)
@@ -89,125 +102,37 @@ class PageController extends Controller
             'tags' => ['SEO', 'AI', 'Digital Marketing', '2025 Trends']
         ];
 
-        return view('frontend.blog-details', compact('post'));
+        $seo_title = $post->title;
+        return view('frontend.blog-details', compact('post', 'seo_title'));
     }
 
     public function services()
     {
-        return view('frontend.services');
+        $services = Service::all();
+        $page = Page::where('template', 'services')->first();
+        $seo_title = $page->seo_title ?? null;
+        $seo_description = $page->seo_description ?? null;
+        $seo_keywords = $page->seo_keywords ?? null;
+        return view('frontend.services', compact('services', 'page', 'seo_title', 'seo_description', 'seo_keywords'));
     }
 
     public function gallery()
     {
-        $projects = [
-            [
-                'title' => 'Hotel Booking System',
-                'category' => 'Web Application',
-                'image' => 'https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-                'description' => 'A comprehensive hotel management and booking solution with real-time availability and payment gateway integration.',
-                'tags' => ['Laravel', 'Vue.js', 'MySQL']
-            ],
-            [
-                'title' => 'CRM System',
-                'category' => 'Business Tool',
-                'image' => 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-                'description' => 'Customer Relationship Management dashboard for tracking leads, sales, and client interactions.',
-                'tags' => ['React', 'Node.js', 'MongoDB']
-            ],
-            [
-                'title' => 'Tax Collection System',
-                'category' => 'FinTech',
-                'image' => 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-                'description' => 'Secure platform for automated tax calculation, collection, and reporting for municipal corporations.',
-                'tags' => ['Java', 'Spring Boot', 'Oracle']
-            ],
-            [
-                'title' => 'Trip Booking Platform',
-                'category' => 'Travel',
-                'image' => 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-                'description' => 'User-friendly interface for booking flights, hotels, and holiday packages with itinerary management.',
-                'tags' => ['Next.js', 'Tailwind', 'API Integration']
-            ],
-            [
-                'title' => 'Transport Management System',
-                'category' => 'Logistics',
-                'image' => 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-                'description' => 'Fleet management solution offering real-time tracking, route optimization, and maintenance scheduling.',
-                'tags' => ['Python', 'Django', 'PostgreSQL']
-            ],
-            [
-                'title' => 'Crypto Currency App',
-                'category' => 'Mobile App',
-                'image' => 'https://images.unsplash.com/photo-1621416894569-0f39ed31d247?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-                'description' => 'Secure mobile wallet and trading application with real-time market charts and portfolio tracking.',
-                'tags' => ['Flutter', 'Firebase', 'Blockchain']
-            ],
-            [
-                'title' => 'QuickTapp',
-                'category' => 'Utility',
-                'image' => 'https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-                'description' => 'NFC-based digital business card application for seamless contact sharing and networking.',
-                'tags' => ['Swift', 'Kotlin', 'NFC']
-            ],
-            [
-                'title' => 'Restaurant Booking System',
-                'category' => 'Hospitality',
-                'image' => 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-                'description' => 'Table reservation and order management system for restaurants with menu customization.',
-                'tags' => ['PHP', 'Laravel', 'Bootstrap']
-            ]
-        ];
-
-        return view('frontend.gallery', compact('projects'));
+        $projects = Project::all();
+        $page = Page::where('template', 'gallery')->first();
+        $seo_title = $page->seo_title ?? null;
+        $seo_description = $page->seo_description ?? null;
+        $seo_keywords = $page->seo_keywords ?? null;
+        return view('frontend.gallery', compact('projects', 'page', 'seo_title', 'seo_description', 'seo_keywords'));
     }
 
     public function testimonials()
     {
-        $testimonials = [
-            [
-                'name' => 'John Anderson',
-                'position' => 'CEO, TechFlow Inc.',
-                'image' => 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80',
-                'content' => 'The Hotel Booking System developed by Webyotic completely transformed our operations. The user interface is intuitive, and the backend is incredibly robust. Highly recommended!',
-                'rating' => 5
-            ],
-            [
-                'name' => 'Emily Carter',
-                'position' => 'Director, City Finance Dept.',
-                'image' => 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80',
-                'content' => 'Their Tax Collection System is a game-changer. It streamlined our entire process, reducing errors by 90% and significantly improving citizen satisfaction.',
-                'rating' => 5
-            ],
-            [
-                'name' => 'Michael Brown',
-                'position' => 'Founder, CryptoWise',
-                'image' => 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80',
-                'content' => 'Building a crypto app requires top-notch security and performance. The team delivered beyond expectations with a sleek, fast, and secure application.',
-                'rating' => 5
-            ],
-            [
-                'name' => 'Sarah Jenkins',
-                'position' => 'Owner, The Golden Spoon',
-                'image' => 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80',
-                'content' => 'Our restaurant bookings have doubled since we launched the new system. The interface is beautiful and our customers love how easy it is to use.',
-                'rating' => 4
-            ],
-            [
-                'name' => 'David Wilson',
-                'position' => 'Manager, Logistics Pro',
-                'image' => 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80',
-                'content' => 'The Transport Management System gave us visibility we never had before. Real-time tracking has helped us optimize routes and save on fuel costs.',
-                'rating' => 5
-            ],
-            [
-                'name' => 'Lisa Wong',
-                'position' => 'Marketing Head, TravelEase',
-                'image' => 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80',
-                'content' => 'QuickTapp is an innovative tool that our sales team uses daily. The Trip Booking Platform they built for us is also world-class. Great partners!',
-                'rating' => 5
-            ]
-        ];
-
-        return view('frontend.testimonials', compact('testimonials'));
+        $testimonials = Testimonial::all();
+        $page = Page::where('template', 'testimonials')->first();
+        $seo_title = $page->seo_title ?? null;
+        $seo_description = $page->seo_description ?? null;
+        $seo_keywords = $page->seo_keywords ?? null;
+        return view('frontend.testimonials', compact('testimonials', 'page', 'seo_title', 'seo_description', 'seo_keywords'));
     }
 }

@@ -1,6 +1,13 @@
 @extends('frontend.layouts.app')
 
 @section('content')
+@if(isset($page) && !empty($page->content))
+<section class="py-12 bg-white">
+    <div class="container mx-auto px-4 max-w-screen-xl prose prose-slate">
+        {!! $page->content !!}
+    </div>
+</section>
+@endif
 <!-- Testimonials Hero Section -->
 <section class="relative bg-slate-900 overflow-hidden py-24 lg:py-32">
     <div class="absolute inset-0 z-0">
@@ -33,7 +40,7 @@
                 <!-- Stars -->
                 <div class="flex mb-6 text-yellow-400">
                     @for($i = 0; $i < 5; $i++)
-                        @if($i < $testimonial['rating'])
+                        @if($i < $testimonial->rating)
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                         @else
                             <svg class="w-5 h-5 text-gray-300 dark:text-gray-600" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -42,14 +49,14 @@
                 </div>
 
                 <p class="text-slate-600 dark:text-gray-300 mb-8 leading-relaxed italic relative z-10">
-                    "{{ $testimonial['content'] }}"
+                    "{{ $testimonial->content }}"
                 </p>
 
                 <div class="flex items-center">
-                    <img loading="lazy" src="{{ $testimonial['image'] }}" alt="{{ $testimonial['name'] }}" class="w-12 h-12 rounded-full object-cover mr-4 ring-2 ring-green-500/50">
+                    <img loading="lazy" src="{{ $testimonial->image }}" alt="{{ $testimonial->name }}" class="w-12 h-12 rounded-full object-cover mr-4 ring-2 ring-green-500/50">
                     <div>
-                        <h4 class="font-bold text-slate-900 dark:text-white">{{ $testimonial['name'] }}</h4>
-                        <p class="text-xs text-slate-500 dark:text-gray-400 uppercase tracking-wide">{{ $testimonial['position'] }}</p>
+                        <h4 class="font-bold text-slate-900 dark:text-white">{{ $testimonial->name }}</h4>
+                        <p class="text-xs text-slate-500 dark:text-gray-400 uppercase tracking-wide">{{ $testimonial->position }}</p>
                     </div>
                 </div>
             </div>

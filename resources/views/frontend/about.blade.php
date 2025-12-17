@@ -1,6 +1,13 @@
 @extends('frontend.layouts.app')
 
 @section('content')
+@if(!empty($page?->content))
+<section class="py-12 bg-white">
+    <div class="container mx-auto px-4 max-w-screen-xl prose prose-slate">
+        {!! $page->content !!}
+    </div>
+</section>
+@endif
 <!-- About Hero Section -->
 <section class="relative bg-slate-900 overflow-hidden py-24 lg:py-32">
     <div class="absolute inset-0 z-0">

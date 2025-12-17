@@ -1,6 +1,13 @@
 @extends('frontend.layouts.app')
 
 @section('content')
+@if(isset($page) && !empty($page->content))
+<section class="py-12 bg-white">
+    <div class="container mx-auto px-4 max-w-screen-xl prose prose-slate">
+        {!! $page->content !!}
+    </div>
+</section>
+@endif
 <!-- Gallery Hero Section -->
 <section class="relative bg-slate-900 overflow-hidden py-24 lg:py-32">
     <div class="absolute inset-0 z-0">
@@ -37,22 +44,22 @@
             <div class="group relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg border border-slate-100 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
                 <!-- Image -->
                 <div class="relative h-64 overflow-hidden">
-                    <img loading="lazy" src="{{ $project['image'] }}" alt="{{ $project['title'] }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <img loading="lazy" src="{{ $project->image }}" alt="{{ $project->title }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                        <span class="text-white font-medium">{{ $project['category'] }}</span>
+                        <span class="text-white font-medium">{{ $project->category }}</span>
                     </div>
                 </div>
                 
                 <!-- Content -->
                 <div class="p-6">
-                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-pink-500 transition-colors">{{ $project['title'] }}</h3>
+                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-pink-500 transition-colors">{{ $project->title }}</h3>
                     <p class="text-slate-600 dark:text-gray-400 mb-4 line-clamp-3">
-                        {{ $project['description'] }}
+                        {{ $project->description }}
                     </p>
                     
                     <!-- Tags -->
                     <div class="flex flex-wrap gap-2 mt-4">
-                        @foreach($project['tags'] as $tag)
+                        @foreach(($project->tags ?? []) as $tag)
                         <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-sky-100 text-sky-800 dark:bg-sky-900 dark:text-sky-300">
                             {{ $tag }}
                         </span>

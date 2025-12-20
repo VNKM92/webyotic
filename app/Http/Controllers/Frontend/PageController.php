@@ -24,6 +24,7 @@ class PageController extends Controller
     public function contact()
     {
         $page = Page::where('template', 'contact')->first();
+       //dd($page);
         $seo_title = $page->seo_title ?? null;
         $seo_description = $page->seo_description ?? null;
         $seo_keywords = $page->seo_keywords ?? null;

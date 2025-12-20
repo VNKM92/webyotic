@@ -9,7 +9,7 @@
 </section>
 @endif
 <!-- Hero Section (Slider) -->
-<section class="relative bg-white dark:bg-gray-900 overflow-hidden">
+{{-- <section class="relative bg-white dark:bg-gray-900 overflow-hidden">
     <div class="absolute inset-0 z-0">
          <!-- Abstract background shape -->
         <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-sky-100 blur-3xl opacity-50"></div>
@@ -59,7 +59,37 @@
              </div>
         </div>
     </div>
-</section>
+</section> --}}
+
+
+{{-- New Hero Section start --}}
+
+    <!-- Hero Section -->
+  <section class="pt-32 pb-20 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+    <div class="animate-slide-in-left">
+      <h1 class="text-4xl md:text-5xl font-bold leading-tight">Enhance Your Brand Visibility with <span class="text-blue-600">AI-Driven</span> SEO Platform</h1>
+      <p class="mt-6 text-gray-600">We deliver tailored SEO strategies that improve your search rankings, drive qualified traffic, and convert visitors into loyal customers.</p>
+      <button class="mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg text-lg hover:bg-blue-700 transition">Get Free Proposal</button>
+      <div class="flex space-x-12 mt-10">
+        <div>
+          <p class="text-3xl font-bold text-blue-600">23K+</p>
+          <p class="text-gray-600">Keywords Ranked</p>
+        </div>
+        <div>
+          <p class="text-3xl font-bold text-blue-600">16+</p>
+          <p class="text-gray-600">Years Experience</p>
+        </div>
+      </div>
+    </div>
+    <div class="relative animate-slide-in-right">
+      <img src="{{asset('build/assets/frontend/image/homepage.webp')}}" class="rounded-xl shadow-lg w-full" />
+      <div class="absolute bottom-4 left-4 bg-white shadow-lg px-4 py-2 rounded-xl flex items-center space-x-3">
+        <img src="https://via.placeholder.com/40" class="w-10 h-10 rounded-full" />
+        <p class="font-semibold">23k Happy Customers</p>
+      </div>
+    </div>
+  </section>
+{{-- end Hero section e --}}
 
 <!-- SEO Cards Section -->
 <section class="bg-slate-50 dark:bg-gray-800 py-20">
@@ -278,4 +308,35 @@
         </div>
     </div>
 </section>
+
+
+
+{{-- new hero section  --}}
+ <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  </script>
+
+  <style>
+    .animate-slide-in-left {
+      animation: slideLeft 1s ease forwards;
+      opacity: 0;
+    }
+    .animate-slide-in-right {
+      animation: slideRight 1s ease forwards;
+      opacity: 0;
+    }
+    @keyframes slideLeft {
+      from { transform: translateX(-40px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes slideRight {
+      from { transform: translateX(40px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+  </style>
+
+{{-- end new hero section  --}}
+
 @endsection

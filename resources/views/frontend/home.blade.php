@@ -8,335 +8,1489 @@
     </div>
 </section>
 @endif
-<!-- Hero Section (Slider) -->
-{{-- <section class="relative bg-white dark:bg-gray-900 overflow-hidden">
-    <div class="absolute inset-0 z-0">
-         <!-- Abstract background shape -->
-        <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-sky-100 blur-3xl opacity-50"></div>
-        <div class="absolute top-1/2 left-0 w-72 h-72 rounded-full bg-orange-100 blur-3xl opacity-50"></div>
-    </div>
-    
-    <div class="relative z-10 max-w-screen-xl px-4 py-20 mx-auto lg:py-32 lg:px-6 flex flex-col-reverse lg:flex-row items-center gap-12">
-        <div class="w-full lg:w-1/2 text-center lg:text-left">
-            <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-slate-900 md:text-5xl lg:text-6xl dark:text-white">
-                Boost Your <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-sky-600">Online Presence</span> with Expert SEO
-            </h1>
-            <p class="mb-8 text-lg font-normal text-slate-500 lg:text-xl sm:px-16 lg:px-0 dark:text-gray-400">
-                Unlock your business potential with data-driven strategies. We help you rank higher, drive traffic, and convert leads into loyal customers.
-            </p>
-            <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center lg:justify-start sm:space-y-0 sm:space-x-4">
-                <a href="{{ route('contact') }}" class="inline-flex justify-center items-center py-3 px-8 text-base font-medium text-center text-white rounded-full bg-gradient-to-r from-sky-500 to-sky-600 hover:from-sky-600 hover:to-sky-700 focus:ring-4 focus:ring-sky-300 shadow-lg hover:shadow-sky-500/30 transition-all transform hover:-translate-y-1">
-                    Get Started
-                    <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                    </svg>
-                </a>
-                <a href="{{ route('services') }}" class="inline-flex justify-center items-center py-3 px-8 text-base font-medium text-center text-slate-900 rounded-full border border-slate-300 hover:bg-slate-100 focus:ring-4 focus:ring-slate-100 transition-all">
-                    View Services
-                </a>
+    <!-- Hero Section Start -->
+    <div class="hero">
+        <div class="container">
+            <div class="row align-items-center">                    
+                <div class="col-lg-12">
+                    <!-- Hero Content Start -->
+                    <div class="hero-content">
+                        <!-- Section Title Start -->
+                        <div class="section-title">
+                            <h3>Welcome to Rank.io</h3>
+                            <h1 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Grow faster with influencer marketing</h1>
+                            <p class="wow fadeInUp" data-wow-delay="0.4s">Partner with trusted influencers to expand your reach, boost engagement, and drive conversions platform connects your brand with voices to accelerate growth.</p>
+                        </div>
+                        <!-- Section Title End -->
+
+                        <!-- Hero Form Box Start -->
+                        <div class="hero-form-box wow fadeInUp" data-wow-delay="0.6s">
+                            <div class="icon-box">
+                                <img src="images/icon-mail-light.svg" alt="">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" class="form-control" id="email" placeholder="Enter your email address *" required>
+                                <button type="submit" class="btn-default">Get Started</button>
+                            </div>
+                        </div>
+                        <!-- Hero Form Box End -->
+
+                        <!-- Hero Info Start -->
+                        <div class="hero-info wow fadeInUp" data-wow-delay="0.8s">
+                            <p>Fill out the form and our team will get back to you shortly.</p>
+                        </div>
+                        <!-- Hero Info End -->
+
+                        <!-- Hero Social Icon Box Start -->
+                        <div class="hero-social-icon-box">
+                            <!-- Hero Icon Box 1 Start -->
+                            <div class="hero-icon-box-1">
+                                <!-- Hero Icon Start -->
+                                <div class="hero-icon hero-icon-1">
+                                    <img src="images/facebook-logo.svg" alt="">
+                                </div>
+                                <!-- Hero Icon End -->
+                                
+                                <!-- Hero Icon Start -->
+                                <div class="hero-icon hero-icon-2">
+                                    <img src="images/youtube-shorts-logo.svg" alt="">
+                                </div>
+                                <!-- Hero Icon End -->
+                            </div>
+                            <!-- Hero Icon Box 1 End -->
+
+                            <!-- Hero Icon Box 2 Start -->
+                            <div class="hero-icon-box-2">
+                                <!-- Hero Icon Start -->
+                                <div class="hero-icon hero-icon-3">
+                                    <img src="images/tiktok-logo.svg" alt="">
+                                </div>
+                                <!-- Hero Icon End -->
+                                
+                                <!-- Hero Icon Start -->
+                                <div class="hero-icon hero-icon-4">
+                                    <img src="images/instagram-reels-logo.svg" alt="">
+                                </div>
+                                <!-- Hero Icon End -->
+                            </div>
+                            <!-- Hero Icon Box 2 End -->
+                        </div>
+                        <!-- Hero Social Icon Box End -->
+                    </div>
+                    <!-- Hero Content End -->
+                </div>
             </div>
         </div>
-        <div class="w-full lg:w-1/2">
-             <div class="relative mx-auto w-full max-w-lg lg:max-w-full">
-                <!-- Simple CSS Slider/Carousel Placeholder -->
-                <div class="relative overflow-hidden rounded-2xl shadow-2xl bg-sky-50 aspect-video flex items-center justify-center group">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-sky-500/10 to-orange-500/10 z-10"></div>
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop" alt="SEO Analysis" class="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105">
-                    
-                    <!-- Floating Card Element -->
-                    <div class="absolute bottom-6 left-6 z-20 bg-white/90 backdrop-blur p-4 rounded-xl shadow-lg max-w-xs animate-bounce" style="animation-duration: 3s;">
-                        <div class="flex items-center space-x-3">
-                            <div class="p-2 bg-green-100 rounded-lg text-green-600">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+
+        <!-- Hero Intro Video Start -->
+        <div class="hero-intro-video">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- Hero Video Box Start -->
+                        <div class="hero-video-box">
+                            <div class="hero-video-image box-bg-shape wow fadeInUp" data-wow-delay="1s">
+                                <figure class="image-anime">
+                                    <img src="images/hero-image.jpg" alt="">
+                                </figure>
+                            
+                                <!-- Video Play Button Start -->
+                                <div class="video-play-button">
+                                    <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video" data-cursor-text="Play">
+                                        <img src="images/icon-youtube-border.svg" alt="">
+                                    </a>
+                                </div>
+                                <!-- Video Play Button End -->
                             </div>
-                            <div>
-                                <p class="text-xs text-slate-500 font-semibold uppercase">Traffic Growth</p>
-                                <p class="text-lg font-bold text-slate-800">+127%</p>
+
+                            <!-- Hero Company Slider Start -->
+                            <div class="hero-company-slider">
+                                <h3>Trusted by <span class="counter">5,000</span> company</h3>
+
+                                <div class="swiper">
+                                    <div class="swiper-wrapper">
+                                        <!-- Company Logo Start -->
+                                        <div class="swiper-slide">
+                                            <div class="company-logo">
+                                                <img src="images/company-logo-1.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <!-- Company Logo End -->
+
+                                        <!-- Company Logo Start -->
+                                        <div class="swiper-slide">
+                                            <div class="company-logo">
+                                                <img src="images/company-logo-2.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <!-- Company Logo End -->
+
+                                        <!-- Company Logo Start -->
+                                        <div class="swiper-slide">
+                                            <div class="company-logo">
+                                                <img src="images/company-logo-3.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <!-- Company Logo End -->
+                                        
+                                        <!-- Company Logo Start -->
+                                        <div class="swiper-slide">
+                                            <div class="company-logo">
+                                                <img src="images/company-logo-4.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <!-- Company Logo End -->
+                                        
+                                        <!-- Company Logo Start -->
+                                        <div class="swiper-slide">
+                                            <div class="company-logo">
+                                                <img src="images/company-logo-1.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <!-- Company Logo End -->
+                                        
+                                        <!-- Company Logo Start -->
+                                        <div class="swiper-slide">
+                                            <div class="company-logo">
+                                                <img src="images/company-logo-2.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <!-- Company Logo End -->
+
+                                        <!-- Company Logo Start -->
+                                        <div class="swiper-slide">
+                                            <div class="company-logo">
+                                                <img src="images/company-logo-3.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <!-- Company Logo End -->
+                                        
+                                        <!-- Company Logo Start -->
+                                        <div class="swiper-slide">
+                                            <div class="company-logo">
+                                                <img src="images/company-logo-4.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <!-- Company Logo End -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Hero Company Slider End -->
+                        </div>
+                        <!-- Hero Video Box End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero Intro Video End -->
+    </div>
+    <!-- Hero Section End -->
+
+    <!-- About Us Section Start -->
+    <div class="about-us">
+        <div class="container">
+            <div class="row section-row">
+                <div class="col-lg-12">
+                    <!-- Section Title Start -->
+                    <div class="section-title section-title-center">
+                        <h3 class="wow fadeInUp">About us</h3>
+                        <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">We help brands grow through authentic connections with <span>social influencers</span></h2>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+            </div>
+                
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <!-- About Us Item Start -->
+                    <div class="about-us-item box-bg-shape">
+                        <div class="about-item-logo">
+                            <img src="images/facebook-text-logo.svg" alt="">
+                        </div>
+                        <div class="about-item-counter">
+                            <h2><span class="counter">5</span>M+</h2>
+                            <p>Facebook Followers</p>
+                        </div>
+                        <div class="about-graph-lines">
+                            <hr>
+                            <hr>
+                        </div>
+                        <div class="about-grapg-image">
+                            <img src="images/about-grapg-image.svg" alt="">
+                        </div>
+                        <div class="about-item-info">
+                            <h3>People Connected</h3>
+                            <p><span class="counter">92.30</span>%</p>
+                        </div>
+                        <div class="about-social-icon">
+                            <a href="contact.html">
+                                <img src="images/facebook-logo.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- About Us Item End -->
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <!-- About Us Item Start -->
+                    <div class="about-us-item box-bg-shape">
+                        <div class="about-item-logo">
+                            <img src="images/youtube-text-logo.svg" alt="">
+                        </div>
+                        <div class="about-item-counter">
+                            <h2><span class="counter">122</span>k</h2>
+                            <p>YouTube Subscribers</p>
+                        </div>
+                        <div class="about-graph-lines">
+                            <hr>
+                            <hr>
+                        </div>
+                        <div class="about-grapg-image">
+                            <img src="images/about-grapg-image.svg" alt="">
+                        </div>
+                        <div class="about-item-info">
+                            <h3>People Connected</h3>
+                            <p><span class="counter">98.09</span>%</p>
+                        </div>
+                        <div class="about-social-icon">
+                            <a href="contact.html">
+                                <img src="images/youtube-logo.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- About Us Item End -->
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <!-- About Us Item Start -->
+                    <div class="about-us-item box-bg-shape">
+                        <div class="about-item-logo">
+                            <img src="images/tiktok-text-logo.svg" alt="">
+                        </div>
+                        <div class="about-item-counter">
+                            <h2><span class="counter">10</span>M+</h2>
+                            <p>Tik Tok Post Viewer</p>
+                        </div>
+                        <div class="about-graph-lines">
+                            <hr>
+                            <hr>
+                        </div>
+                        <div class="about-grapg-image">
+                            <img src="images/about-grapg-image.svg" alt="">
+                        </div>
+                        <div class="about-item-info">
+                            <h3>People Connected</h3>
+                            <p><span class="counter">95.05</span>%</p>
+                        </div>
+                        <div class="about-social-icon">
+                            <a href="contact.html">
+                                <img src="images/tiktok-logo.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- About Us Item End -->
+                </div>
+
+                <div class="col-lg-12">
+                    <!-- Section Footer Text Start -->
+                    <div class="section-footer-text wow fadeInUp" data-wow-delay="0.4s">
+                        <p>Join us and connect brands with voices that truly - <a href="contact.html">influence audiences.</a></p>
+                        <ul>
+                            <li>4.9/5</li>
+                            <li><i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </li>
+                            <li>Over 4200 Reviews</li>
+                        </ul>
+                    </div>
+                    <!-- Section Footer Text End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About Us Section End -->
+
+    <!-- Our Services Section Start -->
+    <div class="our-services bg-section">
+        <div class="container">
+            <div class="row section-row">
+                <div class="col-lg-12">
+                    <!-- Section Title Start -->
+                    <div class="section-title section-title-center">
+                        <h3 class="wow fadeInUp">Services</h3>
+                        <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Influencer marketing services that <span>drive growth</span></h2>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Services Item List Start -->
+                    <div class="service-item-list">
+                        <!-- Services Item Start -->
+                        <div class="service-item box-bg-shape wow fadeInUp">
+                            <div class="icon-box">
+                                <img src="images/icon-service-1.svg" alt="">
+                            </div>
+                            <div class="service-item-title">
+                                <h3><a href="service-single.html">Influencer Discovery</a></h3>
+                            </div>
+                            <div class="service-item-content">
+                                <p>Customized campaign strategies built around your goals.</p>
+                            </div>
+                            <div class="readmore-btn">
+                                <a href="service-single.html"><img src="images/arrow-white.svg" alt=""></a>
+                            </div>
+                        </div>
+                        <!-- Services Item End -->
+                    
+                        <!-- Services Item Start -->
+                        <div class="service-item box-bg-shape wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="icon-box">
+                                <img src="images/icon-service-2.svg" alt="">
+                            </div>
+                            <div class="service-item-title">
+                                <h3><a href="service-single.html">Campaign Strategy</a></h3>
+                            </div>
+                            <div class="service-item-content">
+                                <p>Customized campaign strategies built around your goals.</p>
+                            </div>
+                            <div class="readmore-btn">
+                                <a href="service-single.html"><img src="images/arrow-white.svg" alt=""></a>
+                            </div>
+                        </div>
+                        <!-- Services Item End -->
+                    
+                        <!-- Services Item Start -->
+                        <div class="service-item box-bg-shape wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="icon-box">
+                                <img src="images/icon-service-3.svg" alt="">
+                            </div>
+                            <div class="service-item-title">
+                                <h3><a href="service-single.html">Influencer Outreach</a></h3>
+                            </div>
+                            <div class="service-item-content">
+                                <p>Customized campaign strategies built around your goals.</p>
+                            </div>
+                            <div class="readmore-btn">
+                                <a href="service-single.html"><img src="images/arrow-white.svg" alt=""></a>
+                            </div>
+                        </div>
+                        <!-- Services Item End -->
+    
+                        <!-- Services Item Start -->
+                        <div class="service-item box-bg-shape wow fadeInUp" data-wow-delay="0.6s">
+                            <div class="icon-box">
+                                <img src="images/icon-service-3.svg" alt="">
+                            </div>
+                            <div class="service-item-title">
+                                <h3><a href="service-single.html">Content Creation</a></h3>
+                            </div>
+                            <div class="service-item-content">
+                                <p>Customized campaign strategies built around your goals.</p>
+                            </div>
+                            <div class="readmore-btn">
+                                <a href="service-single.html"><img src="images/arrow-white.svg" alt=""></a>
+                            </div>
+                        </div>
+                        <!-- Services Item End -->
+                    </div>
+                    <!-- Services Item List End -->
+                </div>
+
+                <div class="col-lg-4">
+                    <!-- Service Video Content Box Start -->
+                    <div class="service-video-content-box">
+                        <!-- Service Video Box Start -->
+                        <div class="service-video-box">
+                            <!-- Selfhosted Video Start -->
+                            <!-- <video autoplay muted loop id="myvideo"><source src="images/nextmind-how-work-video.mp4" type="video/mp4"></video> -->
+                            <video autoplay muted loop id="hwvideo"><source src="https://demo.awaikenthemes.com/assets/videos/rankio-influencer-services.mp4" type="video/mp4"></video>
+                            <!-- Selfhosted Video End -->
+
+                            <!-- Youtube Video Start -->
+                            <!-- <div id="herovideo" class="player" data-property="{videoURL:'OjTRVpgtcG4',containment:'.hero-video', showControls:false, autoPlay:true, loop:true, vol:0, mute:false, startAt:0,  stopAt:296, opacity:1, addRaster:true, quality:'large', optimizeDisplay:true}"></div> -->
+                            <!-- Youtube Video End -->
+                        </div>
+                        <!-- Service Video Box Start -->
+
+                        <!-- Service Video Content Start -->
+                        <div class="service-video-content wow fadeInUp" data-wow-delay="0.2s">
+                            <h3>Let's Influence Together Today</h3>
+                            <a href="services.html" class="btn-default">View All Services</a>
+                        </div>
+                        <!-- Service Video Content End -->
+                    </div>
+                    <!-- Service Video Content Box End -->
+                </div>
+                
+                <div class="col-lg-12">
+                    <!-- Section Footer Text Start -->
+                    <div class="section-footer-text wow fadeInUp" data-wow-delay="0.6s">
+                        <p><span>Free</span>Let's make something great work together. <a href="contact.html">Get Free Quote</a></p>
+                    </div>
+                    <!-- Section Footer Text End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Services Section End -->
+
+    <!-- What We Do Section Start -->
+    <div class="what-we-do">
+        <div class="container">
+            <div class="row section-row align-items-center">
+                <div class="col-lg-6">
+                    <!-- Section Title Start -->
+                    <div class="section-title">
+                        <h3 class="wow fadeInUp">What We Do</h3>
+                        <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Connecting brands with trusted <span>social voices</span></h2>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+
+                <div class="col-lg-6">
+                    <!-- Section Title Content Start -->
+                    <div class="section-title-content wow fadeInUp" data-wow-delay="0.4s">
+                        <p>We specialize in pairing your brand with credible, influential creators who align with your values and speak authentically to your audience. By leveraging their trust and reach, we help you drive engagement.</p>
+                    </div>
+                    <!-- Section Title Content End -->
+                </div>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <!-- What We Do Image Start -->
+                    <div class="what-we-do-image">
+                        <figure class="image-anime reveal">
+                            <img src="images/what-we-do-image.jpg" alt="">
+                        </figure>
+                    </div>
+                    <!-- What We Do Image End -->
+                </div>
+
+                <div class="col-lg-6">
+                    <!-- What We Do Content Start -->
+                    <div class="what-we-do-content">
+                        <!-- What We Do Body Start -->
+                        <div class="what-we-do-body">
+                            <!-- What Do Body Item Start -->
+                            <div class="what-do-body-item wow fadeInUp" data-wow-delay="0.2s">
+                                <h3>Influencer Discovery & Vetting</h3>
+                                <p>We collaborate with a network of expert influencers who are trusted voices in their industries</p>
+                            </div>
+                            <!-- What Do Body Item End -->
+
+                            <!-- What Do Counter Box Start -->
+                            <div class="what-do-counter-box">
+                                <!-- What Do Counter Item Start -->
+                                <div class="what-do-counter-item">
+                                    <h2><span class="counter">80</span>+</h2>
+                                    <p>Countries Covered</p>
+                                </div>
+                                <!-- What Do Counter Item End -->
+
+                                <!-- What Do Counter Item Start -->
+                                <div class="what-do-counter-item">
+                                    <h2><span class="counter">6.2</span>x</h2>
+                                    <p>Avg. ROI Campaign</p>
+                                </div>
+                                <!-- What Do Counter Item End -->
+                            </div>
+                            <!-- What Do Counter Box End -->
+                        </div>
+                        <!-- What We Do Body End -->
+
+                        <!-- What Do Info Box Start -->
+                        <div class="what-do-info-box box-bg-shape wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="what-do-info-content">
+                                <h3>Influencer Outreach & Negotiation</h3>
+                                <p>We identify and connect you with the most relevant influencers who align with your brand's values, audience & goals. Each creator is carefully vetted based on engagement rates content quality.</p>
+                            </div>
+                            <div class="what-do-info-list">
+                                <ul>
+                                    <li>Brand Partnerships</li>
+                                    <li>Campaigns</li>
+                                </ul>
+                            </div>
+                            <div class="readmore-btn">
+                                <a href="contact.html">
+                                    <img src="images/arrow-white.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- What Do Info Box End -->
+                    </div>
+                    <!-- What We Do Content End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- What We Do Section End -->
+
+    <!-- Influencer Network Section Start -->
+    <div class="influencer-network bg-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <!-- Influencer Network Content Start -->
+                    <div class="influencer-network-content">
+                        <!-- Section Title Start -->
+                        <div class="section-title">
+                            <h3 class="wow fadeInUp">Influencer Network</h3>
+                            <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Authentic voices, trusted <span>by leading brands</span></h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.4s">Our influencer network is built on authenticity, creativity, and impact collaborate with trusted creators.</p>
+                        </div>
+                        <!-- Section Title End -->
+
+                        <!-- Influencer Network List Start -->
+                        <div class="influencer-network-list wow fadeInUp" data-wow-delay="0.6s">
+                            <ul>
+                                <li>Verified Global Database</li>
+                                <li>Niche-Specific Creator</li>
+                                <li>Data-Driven Performance</li>
+                                <li>AI-Powered Discovery Tools</li>
+                            </ul>
+                        </div>
+                        <!-- Influencer Network List End -->
+
+                        <!-- Influencer Network Body Start -->
+                        <div class="influencer-network-body wow fadeInUp" data-wow-delay="0.8s">
+                            <!-- Influencer Network Image Start -->
+                            <div class="network-body-image box-bg-shape">
+                                <figure class="image-anime">
+                                    <img src="images/network-body-image.jpg" alt="">
+                                </figure>
+
+                                <div class="readmore-btn">
+                                    <a href="contact.html">
+                                        <img src="images/arrow-white.svg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Influencer Network Image End -->
+
+                            <!-- Network Body Counter Box Start -->
+                            <div class="network-body-counter-box">
+                                <div class="icon-box">
+                                    <img src="images/icon-network-body.svg" alt="">
+                                </div>
+                                <div class="network-body-item-content">
+                                    <h2><span class="counter">95</span>%</h2>
+                                    <p>Customer Satisfaction Rate</p>
+                                </div>
+                            </div>
+                            <!-- Network Body Counter Box End -->
+                        </div>
+                        <!-- Influencer Network Body End -->
+                    </div>
+                    <!-- Influencer Network Content End -->
+                </div>
+
+                <div class="col-lg-6">
+                    <!-- Influencer Network Slider Start -->
+                    <div class="influencer-network-slider">
+                        <div class="swiper">
+                            <div class="swiper-wrapper" data-cursor-text="Drag">
+                                <!-- Influencer Network Slide Start -->
+                                <div class="swiper-slide">
+                                    <div class="influencer-network-image">
+                                        <figure>
+                                            <img src="images/influencer-network-img-1.png" alt="">
+                                        </figure>
+                                    </div>
+                                </div>
+                                <!-- Influencer Network Slide End -->
+
+                                <!-- Influencer Network Slide Start -->
+                                <div class="swiper-slide">
+                                    <div class="influencer-network-image">
+                                        <figure>
+                                            <img src="images/influencer-network-img-2.png" alt="">
+                                        </figure>
+                                    </div>
+                                </div>
+                                <!-- Influencer Network Slide End -->
+
+                                <!-- Influencer Network Slide Start -->
+                                <div class="swiper-slide">
+                                    <div class="influencer-network-image">
+                                        <figure>
+                                            <img src="images/influencer-network-img-3.png" alt="">
+                                        </figure>
+                                    </div>
+                                </div>
+                                <!-- Influencer Network Slide End -->
+                            </div>
+                            <div class="influencer-network-pagination"></div>
+                        </div>
+                    </div>
+                    <!-- Influencer Network Slider End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Influencer Network Section End -->
+
+    <!-- Our Impact Section Start -->
+    <div class="our-impact">
+        <div class="container">
+            <div class="row section-row">
+                <div class="col-lg-12">
+                    <!-- Section Title Start -->
+                    <div class="section-title section-title-center">
+                        <h3 class="wow fadeInUp">results & starts</h3>
+                        <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Influencer marketing stats that <span>prove our impact</span></h2>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 order-1">
+                    <!-- Impact Item Box Start -->
+                    <div class="impact-item-box">
+                        <!-- Impact Item Start -->
+                        <div class="impact-item box-bg-shape wow fadeInUp">
+                            <div class="impact-item-content">
+                                <p>Verified Influencers Across All Niches</p>
+                            </div>
+                            <div class="impact-item-content">
+                                <h2><span class="counter">5,000</span>+</h2>
+                            </div>
+                            <div class="readmore-btn">
+                                <a href="contact.html">
+                                    <img src="images/arrow-white.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Impact Item Box End -->
+
+                        <!-- Impact Image Start -->
+                        <div class="impact-image wow fadeInUp" data-wow-delay="0.2s">
+                            <figure>
+                                <img src="images/impact-image-1.png" alt="">
+                            </figure>
+                        </div>
+                        <!-- Impact Image End -->
+                    </div>
+                    <!-- Impact Item Box End -->
+                </div>
+
+                <div class="col-lg-4 order-lg-2 order-md-3 order-2">
+                    <!-- Impact Image Box Start -->
+                    <div class="impact-image-box">
+                        <figure class="image-anime reveal">
+                            <img src="images/impact-image-3.jpg" alt="">
+                        </figure>
+                    </div>
+                    <!-- Impact Image Box End -->
+                </div>
+
+                <div class="col-lg-4 col-md-6 order-lg-3 order-md-2 order-3">
+                    <!-- Impact Item Box Start -->
+                    <div class="impact-item-box">
+                        <!-- Impact Image Start -->
+                        <div class="impact-image wow fadeInUp">
+                            <figure>
+                                <img src="images/impact-image-2.png" alt="">
+                            </figure>
+                        </div>
+                        <!-- Impact Image End -->
+
+                        <!-- Impact Item List Start -->
+                        <div class="impact-item-list wow fadeInUp" data-wow-delay="0.2s">
+                            <!-- Impact Item Start -->
+                            <div class="impact-item">
+                                <div class="icon-box">
+                                    <img src="images/icon-impact-1.svg" alt="">
+                                </div>
+                                <div class="impact-item-content">
+                                    <h2><span class="counter">6.4</span>%</h2>
+                                    <p>Engagement Rates</p>
+                                </div>
+                            </div>
+                            <!-- Impact Item End -->
+                            
+                            <!-- Impact Item Start -->
+                            <div class="impact-item">
+                                <div class="icon-box">
+                                    <img src="images/icon-impact-2.svg" alt="">
+                                </div>
+                                <div class="impact-item-content">
+                                    <h2><span class="counter">120</span></h2>
+                                    <p>Content Piece Created</p>
+                                </div>
+                            </div>
+                            <!-- Impact Item End -->
+                        </div>
+                        <!-- Impact Item List End -->
+                    </div>
+                    <!-- Impact Item Box End -->
+                </div>
+
+                <div class="col-lg-12 order-4">
+                    <!-- Section Footer Text Start -->
+                    <div class="section-footer-text wow fadeInUp" data-wow-delay="0.4s">
+                        <!-- Satisfy Client Images Start -->
+                        <div class="satisfy-client-images">
+                            <div class="satisfy-client-image">
+                                <figure class="image-anime">
+                                    <img src="images/satisfy-client-img-1.jpg" alt="">
+                                </figure>
+                            </div>
+                            <div class="satisfy-client-image">
+                                <figure class="image-anime">
+                                    <img src="images/satisfy-client-img-2.jpg" alt="">
+                                </figure>
+                            </div>
+                            <div class="satisfy-client-image">
+                                <figure class="image-anime">
+                                    <img src="images/satisfy-client-img-3.jpg" alt="">
+                                </figure>
+                            </div>
+                            <div class="satisfy-client-image add-more">
+                                <i class="fa fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+                        <!-- Satisfy Client Images End -->
+
+                        <p>Need a Custom Video Module? Let's Build It Together - <a href="contact.html">Contact Our AI Expert Today!</a></p>
+                    </div>
+                    <!-- Section Footer Text End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Impact Section End -->
+
+    <!-- How It Work Section Start -->
+    <div class="how-it-work bg-section dark-section">
+        <div class="container">
+            <div class="row section-row align-items-center">
+                <div class="col-lg-12">
+                    <!-- Section Title Start -->
+                    <div class="section-title section-title-center">
+                        <h3 class="wow fadeInUp">How it work</h3>
+                        <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">How our influencer marketing process works</h2>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Work Step Item List Start -->
+                    <div class="work-step-item-list">
+                        <!-- Work Step Item Start -->
+                        <div class="work-step-item wow fadeInUp">
+                            <div class="work-step-no">
+                                <h3>step 01</h3>
+                            </div>
+                            <div class="work-step-content">
+                                <h3>Influencer Discovery</h3>
+                                <p>Find the perfect influencers who align with your brand.</p>
+                            </div>
+                            <div class="icon-box">
+                                <img src="images/icon-work-step-1.svg" alt="">
+                            </div>
+                        </div>
+                        <!-- Work Step Item End -->
+
+                        <!-- Work Step Item Start -->
+                        <div class="work-step-item wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="work-step-no">
+                                <h3>step 02</h3>
+                            </div>
+                            <div class="work-step-content">
+                                <h3>Campaign Planning</h3>
+                                <p>Find the perfect influencers who align with your brand.</p>
+                            </div>
+                            <div class="icon-box">
+                                <img src="images/icon-work-step-2.svg" alt="">
+                            </div>
+                        </div>
+                        <!-- Work Step Item End -->
+
+                        <!-- Work Step Item Start -->
+                        <div class="work-step-item wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="work-step-no">
+                                <h3>step 03</h3>
+                            </div>
+                            <div class="work-step-content">
+                                <h3>Performance Tracking</h3>
+                                <p>Find the perfect influencers who align with your brand.</p>
+                            </div>
+                            <div class="icon-box">
+                                <img src="images/icon-work-step-3.svg" alt="">
+                            </div>
+                        </div>
+                        <!-- Work Step Item End -->
+
+                        <!-- Work Step Item Start -->
+                        <div class="work-step-item wow fadeInUp" data-wow-delay="0.6s">
+                            <div class="work-step-no">
+                                <h3>step 04</h3>
+                            </div>
+                            <div class="work-step-content">
+                                <h3>Results Optimization</h3>
+                                <p>Find the perfect influencers who align with your brand.</p>
+                            </div>
+                            <div class="icon-box">
+                                <img src="images/icon-work-step-4.svg" alt="">
+                            </div>
+                        </div>
+                        <!-- Work Step Item End -->
+                    </div>
+                    <!-- Work Step Item List End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- How It Work Section End -->
+
+    <!-- Our Team Section Start -->
+    <div class="our-team">
+        <div class="container">
+            <div class="row section-row">
+                <div class="col-lg-12">
+                    <!-- Section Title Start -->
+                    <div class="section-title section-title-center">
+                        <h3 class="wow fadeInUp">Our Influencer</h3>
+                        <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Meet the influencers behind <span>your growth</span></h2>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <!-- Team Item Start -->
+                    <div class="team-item wow fadeInUp">
+                        <div class="team-image">
+                            <a href="team-single.html" data-cursor-text="View">
+                                <figure class="image-anime">
+                                    <img src="images/team-1.jpg" alt="">
+                                </figure>
+                            </a>
+                            <div class="team-content">
+                                <h3><a href="team-single.html">Brooklyn Simmons</a></h3>
+                                <p>Head of Influencer</p>
+                            </div>
+                        </div>
+                        <div class="team-counter-list">
+                            <div class="team-counter-item">
+                                <h3><span class="counter">85</span>K</h3>
+                                <p>Followers</p>
+                            </div>
+                            <div class="team-counter-item">
+                                <h3><span class="counter">20</span>K</h3>
+                                <p>Following</p>
                             </div>
                         </div>
                     </div>
+                    <!-- Team Item End -->
                 </div>
-             </div>
-        </div>
-    </div>
-</section> --}}
 
-
-{{-- New Hero Section start --}}
-
-    <!-- Hero Section -->
-  <section class="pt-32 pb-20 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-    <div class="animate-slide-in-left">
-      <h1 class="text-4xl md:text-5xl font-bold leading-tight">Enhance Your Brand Visibility with <span class="text-blue-600">AI-Driven</span> SEO Platform</h1>
-      <p class="mt-6 text-gray-600">We deliver tailored SEO strategies that improve your search rankings, drive qualified traffic, and convert visitors into loyal customers.</p>
-      <button class="mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg text-lg hover:bg-blue-700 transition">Get Free Proposal</button>
-      <div class="flex space-x-12 mt-10">
-        <div>
-          <p class="text-3xl font-bold text-blue-600">23K+</p>
-          <p class="text-gray-600">Keywords Ranked</p>
-        </div>
-        <div>
-          <p class="text-3xl font-bold text-blue-600">16+</p>
-          <p class="text-gray-600">Years Experience</p>
-        </div>
-      </div>
-    </div>
-    <div class="relative animate-slide-in-right">
-      <img src="{{asset('build/assets/frontend/image/homepage.webp')}}" class="rounded-xl shadow-lg w-full" />
-      <div class="absolute bottom-4 left-4 bg-white shadow-lg px-4 py-2 rounded-xl flex items-center space-x-3">
-        <img src="https://via.placeholder.com/40" class="w-10 h-10 rounded-full" />
-        <p class="font-semibold">23k Happy Customers</p>
-      </div>
-    </div>
-  </section>
-{{-- end Hero section e --}}
-
-<!-- SEO Cards Section -->
-<section class="bg-slate-50 dark:bg-gray-800 py-20">
-    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-        <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-16">
-            <h2 class="mb-4 text-3xl tracking-tight font-extrabold text-slate-900 dark:text-white">Why Choose Webyotic?</h2>
-            <p class="font-light text-slate-500 sm:text-xl dark:text-gray-400">We leverage cutting-edge tools and proven methodologies to deliver measurable results.</p>
-        </div>
-        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            <!-- Card 1 -->
-            <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-slate-100 group">
-                <div class="flex justify-center items-center mb-4 w-14 h-14 rounded-full bg-sky-100 lg:h-16 lg:w-16 group-hover:bg-sky-500 transition-colors duration-300">
-                    <svg class="w-6 h-6 text-sky-600 lg:w-8 lg:h-8 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 20 20"><path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"/></svg>
-                </div>
-                <h3 class="mb-2 text-xl font-bold dark:text-white text-slate-800">Keyword Strategy</h3>
-                <p class="text-slate-500 dark:text-gray-400 text-sm leading-relaxed">We identify high-value keywords that drive targeted traffic to your site.</p>
-            </div>
-            <!-- Card 2 -->
-            <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-slate-100 group">
-                <div class="flex justify-center items-center mb-4 w-14 h-14 rounded-full bg-orange-100 lg:h-16 lg:w-16 group-hover:bg-orange-500 transition-colors duration-300">
-                    <svg class="w-6 h-6 text-orange-600 lg:w-8 lg:h-8 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </div>
-                <h3 class="mb-2 text-xl font-bold dark:text-white text-slate-800">On-Page SEO</h3>
-                <p class="text-slate-500 dark:text-gray-400 text-sm leading-relaxed">Optimizing content and HTML source code to improve search visibility.</p>
-            </div>
-            <!-- Card 3 -->
-            <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-slate-100 group">
-                <div class="flex justify-center items-center mb-4 w-14 h-14 rounded-full bg-sky-100 lg:h-16 lg:w-16 group-hover:bg-sky-500 transition-colors duration-300">
-                    <svg class="w-6 h-6 text-sky-600 lg:w-8 lg:h-8 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 20 20"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path></svg>
-                </div>
-                <h3 class="mb-2 text-xl font-bold dark:text-white text-slate-800">Link Building</h3>
-                <p class="text-slate-500 dark:text-gray-400 text-sm leading-relaxed">Acquiring high-quality backlinks to boost domain authority and trust.</p>
-            </div>
-            <!-- Card 4 -->
-            <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-slate-100 group">
-                <div class="flex justify-center items-center mb-4 w-14 h-14 rounded-full bg-orange-100 lg:h-16 lg:w-16 group-hover:bg-orange-500 transition-colors duration-300">
-                    <svg class="w-6 h-6 text-orange-600 lg:w-8 lg:h-8 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                </div>
-                <h3 class="mb-2 text-xl font-bold dark:text-white text-slate-800">Analytics & Reporting</h3>
-                <p class="text-slate-500 dark:text-gray-400 text-sm leading-relaxed">Detailed insights and reports to track performance and ROI.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Testimonials Section -->
-<section class="bg-white dark:bg-gray-900 py-20 relative overflow-hidden">
-     <!-- Background decoration -->
-    <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20 pointer-events-none">
-        <div class="absolute -top-20 -left-20 w-80 h-80 rounded-full bg-sky-200 blur-3xl"></div>
-        <div class="absolute top-1/2 right-0 w-60 h-60 rounded-full bg-orange-200 blur-3xl"></div>
-    </div>
-
-    <div class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6 relative z-10">
-        <div class="mx-auto max-w-screen-sm">
-            <h2 class="mb-4 text-3xl tracking-tight font-extrabold text-slate-900 dark:text-white">Trusted by Clients</h2>
-            <p class="mb-8 font-light text-slate-500 lg:mb-16 sm:text-xl dark:text-gray-400">See what our partners have to say about our work.</p>
-        </div> 
-        
-        <!-- Slider Implementation using horizontal scroll snap -->
-        <div class="flex overflow-x-auto snap-x snap-mandatory pb-8 gap-6 no-scrollbar" style="-ms-overflow-style: none; scrollbar-width: none;">
-            <!-- Testimonial 1 -->
-            <div class="snap-center shrink-0 w-full md:w-[600px] bg-slate-50 p-8 rounded-2xl shadow-sm border border-slate-100 mx-auto">
-                <div class="flex items-center mb-6 justify-center">
-                    <img class="w-16 h-16 rounded-full border-4 border-white shadow-md" src="https://i.pravatar.cc/150?img=32" alt="profile picture">
-                </div>
-                <figure class="max-w-screen-md mx-auto">
-                    <svg class="h-12 mx-auto mb-3 text-slate-300 dark:text-gray-600" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M14.017 20L14.017 18C14.017 16.054 15.192 13.554 17.426 11.226C18.57 10.034 19.546 9.432 20.354 9.42C21.162 9.432 21.922 9.872 22.634 10.74C23.346 11.608 23.702 12.636 23.702 13.824C23.702 15.012 23.324 16.126 22.568 17.166C21.812 18.206 20.658 19.15 19.106 20H14.017ZM0.721998 20L0.721998 18C0.721998 16.054 1.896 13.554 4.13 11.226C5.274 10.034 6.25 9.432 7.058 9.42C7.866 9.432 8.626 9.872 9.338 10.74C10.05 11.608 10.406 12.636 10.406 13.824C10.406 15.012 10.028 16.126 9.272 17.166C8.516 18.206 7.362 19.15 5.81 20H0.721998Z" fill="currentColor"/>
-                    </svg> 
-                    <blockquote>
-                        <p class="text-xl font-medium text-slate-900 dark:text-white">"Webyotic transformed our organic search traffic. We saw a 200% increase in leads within just 3 months. Highly recommended!"</p>
-                    </blockquote>
-                    <figcaption class="flex items-center justify-center mt-6 space-x-3">
-                        <div class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
-                            <div class="pr-3 font-medium text-slate-900 dark:text-white">Sarah Johnson</div>
-                            <div class="pl-3 text-sm font-light text-slate-500 dark:text-gray-400">CEO at TechStart</div>
+                <div class="col-lg-3 col-md-6">
+                    <!-- Team Item Start -->
+                    <div class="team-item wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="team-image">
+                            <a href="team-single.html" data-cursor-text="View">
+                                <figure class="image-anime">
+                                    <img src="images/team-2.jpg" alt="">
+                                </figure>
+                            </a>
+                            <div class="team-content">
+                                <h3><a href="team-single.html">Theresa Webb</a></h3>
+                                <p>Campaign Manager</p>
+                            </div>
                         </div>
-                    </figcaption>
-                </figure>
-            </div>
-             <!-- Testimonial 2 -->
-             <div class="snap-center shrink-0 w-full md:w-[600px] bg-slate-50 p-8 rounded-2xl shadow-sm border border-slate-100 mx-auto">
-                <div class="flex items-center mb-6 justify-center">
-                    <img class="w-16 h-16 rounded-full border-4 border-white shadow-md" src="https://i.pravatar.cc/150?img=11" alt="profile picture">
-                </div>
-                <figure class="max-w-screen-md mx-auto">
-                    <svg class="h-12 mx-auto mb-3 text-slate-300 dark:text-gray-600" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M14.017 20L14.017 18C14.017 16.054 15.192 13.554 17.426 11.226C18.57 10.034 19.546 9.432 20.354 9.42C21.162 9.432 21.922 9.872 22.634 10.74C23.346 11.608 23.702 12.636 23.702 13.824C23.702 15.012 23.324 16.126 22.568 17.166C21.812 18.206 20.658 19.15 19.106 20H14.017ZM0.721998 20L0.721998 18C0.721998 16.054 1.896 13.554 4.13 11.226C5.274 10.034 6.25 9.432 7.058 9.42C7.866 9.432 8.626 9.872 9.338 10.74C10.05 11.608 10.406 12.636 10.406 13.824C10.406 15.012 10.028 16.126 9.272 17.166C8.516 18.206 7.362 19.15 5.81 20H0.721998Z" fill="currentColor"/>
-                    </svg> 
-                    <blockquote>
-                        <p class="text-xl font-medium text-slate-900 dark:text-white">"The team is professional, knowledgeable, and easy to work with. Their strategies are spot on."</p>
-                    </blockquote>
-                    <figcaption class="flex items-center justify-center mt-6 space-x-3">
-                        <div class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
-                            <div class="pr-3 font-medium text-slate-900 dark:text-white">Mark Davis</div>
-                            <div class="pl-3 text-sm font-light text-slate-500 dark:text-gray-400">Marketing Director</div>
+                        <div class="team-counter-list">
+                            <div class="team-counter-item">
+                                <h3><span class="counter">10</span>K</h3>
+                                <p>Followers</p>
+                            </div>
+                            <div class="team-counter-item">
+                                <h3><span class="counter">12</span>K</h3>
+                                <p>Following</p>
+                            </div>
                         </div>
-                    </figcaption>
-                </figure>
-            </div>
-             <!-- Testimonial 3 -->
-             <div class="snap-center shrink-0 w-full md:w-[600px] bg-slate-50 p-8 rounded-2xl shadow-sm border border-slate-100 mx-auto">
-                <div class="flex items-center mb-6 justify-center">
-                    <img class="w-16 h-16 rounded-full border-4 border-white shadow-md" src="https://i.pravatar.cc/150?img=5" alt="profile picture">
+                    </div>
+                    <!-- Team Item End -->
                 </div>
-                <figure class="max-w-screen-md mx-auto">
-                    <svg class="h-12 mx-auto mb-3 text-slate-300 dark:text-gray-600" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M14.017 20L14.017 18C14.017 16.054 15.192 13.554 17.426 11.226C18.57 10.034 19.546 9.432 20.354 9.42C21.162 9.432 21.922 9.872 22.634 10.74C23.346 11.608 23.702 12.636 23.702 13.824C23.702 15.012 23.324 16.126 22.568 17.166C21.812 18.206 20.658 19.15 19.106 20H14.017ZM0.721998 20L0.721998 18C0.721998 16.054 1.896 13.554 4.13 11.226C5.274 10.034 6.25 9.432 7.058 9.42C7.866 9.432 8.626 9.872 9.338 10.74C10.05 11.608 10.406 12.636 10.406 13.824C10.406 15.012 10.028 16.126 9.272 17.166C8.516 18.206 7.362 19.15 5.81 20H0.721998Z" fill="currentColor"/>
-                    </svg> 
-                    <blockquote>
-                        <p class="text-xl font-medium text-slate-900 dark:text-white">"Incredible results and fantastic support. They really care about their clients' success."</p>
-                    </blockquote>
-                    <figcaption class="flex items-center justify-center mt-6 space-x-3">
-                        <div class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
-                            <div class="pr-3 font-medium text-slate-900 dark:text-white">Emily Chen</div>
-                            <div class="pl-3 text-sm font-light text-slate-500 dark:text-gray-400">Founder, StyleCo</div>
-                        </div>
-                    </figcaption>
-                </figure>
-            </div>
-        </div>
-        <p class="mt-4 text-xs text-slate-400">Swipe to see more</p>
-    </div>
-</section>
 
-<!-- Pricing Section -->
-<section class="bg-slate-50 dark:bg-gray-800 py-20">
-    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-        <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-16">
-            <h2 class="mb-4 text-3xl tracking-tight font-extrabold text-slate-900 dark:text-white">SEO Packages</h2>
-            <p class="font-light text-slate-500 sm:text-xl dark:text-gray-400">Choose the perfect plan to grow your business.</p>
-        </div>
-        <div class="space-y-8 lg:grid lg:grid-cols-3 lg:space-y-0 lg:gap-10">
-            <!-- Pricing Card 1 -->
-            <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-slate-900 bg-white rounded-2xl border border-slate-100 shadow-sm xl:p-8 dark:bg-gray-800 dark:text-white hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                <h3 class="mb-4 text-2xl font-semibold">Starter</h3>
-                <p class="font-light text-slate-500 sm:text-lg dark:text-gray-400">Best for small businesses.</p>
-                <div class="flex justify-center items-baseline my-8">
-                    <span class="mr-2 text-5xl font-extrabold">$299</span>
-                    <span class="text-slate-500 dark:text-gray-400">/month</span>
+                <div class="col-lg-3 col-md-6">
+                    <!-- Team Item Start -->
+                    <div class="team-item wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="team-image">
+                            <a href="team-single.html" data-cursor-text="View">
+                                <figure class="image-anime">
+                                    <img src="images/team-3.jpg" alt="">
+                                </figure>
+                            </a>
+                            <div class="team-content">
+                                <h3><a href="team-single.html">Darrell Steward</a></h3>
+                                <p>Influencer Coordinator</p>
+                            </div>
+                        </div>
+                        <div class="team-counter-list">
+                            <div class="team-counter-item">
+                                <h3><span class="counter">1</span>M</h3>
+                                <p>Followers</p>
+                            </div>
+                            <div class="team-counter-item">
+                                <h3><span class="counter">100</span>K</h3>
+                                <p>Following</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Team Item End -->
                 </div>
-                <ul role="list" class="mb-8 space-y-4 text-left">
-                    <li class="flex items-center space-x-3">
-                        <svg class="flex-shrink-0 w-5 h-5 text-sky-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                        <span>5 Keywords Optimization</span>
-                    </li>
-                    <li class="flex items-center space-x-3">
-                        <svg class="flex-shrink-0 w-5 h-5 text-sky-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                        <span>Basic On-Page SEO</span>
-                    </li>
-                    <li class="flex items-center space-x-3">
-                        <svg class="flex-shrink-0 w-5 h-5 text-sky-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                        <span>Monthly Reporting</span>
-                    </li>
-                </ul>
-                <a href="{{ route('contact') }}" class="text-white bg-slate-900 hover:bg-slate-800 focus:ring-4 focus:ring-slate-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center transition-colors">Get started</a>
-            </div>
-            <!-- Pricing Card 2 -->
-            <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-slate-900 bg-white rounded-2xl border-2 border-sky-500 shadow-xl xl:p-8 dark:bg-gray-800 dark:text-white relative hover:-translate-y-2 transition-all duration-300">
-                <div class="absolute top-0 right-0 bg-sky-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">POPULAR</div>
-                <h3 class="mb-4 text-2xl font-semibold">Growth</h3>
-                <p class="font-light text-slate-500 sm:text-lg dark:text-gray-400">For growing companies.</p>
-                <div class="flex justify-center items-baseline my-8">
-                    <span class="mr-2 text-5xl font-extrabold">$599</span>
-                    <span class="text-slate-500 dark:text-gray-400">/month</span>
+
+                <div class="col-lg-3 col-md-6">
+                    <!-- Team Item Start -->
+                    <div class="team-item wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="team-image">
+                            <a href="team-single.html" data-cursor-text="View">
+                                <figure class="image-anime">
+                                    <img src="images/team-4.jpg" alt="">
+                                </figure>
+                            </a>
+                            <div class="team-content">
+                                <h3><a href="team-single.html">Eleanor Pena</a></h3>
+                                <p>Campaign Manager</p>
+                            </div>
+                        </div>
+                        <div class="team-counter-list">
+                            <div class="team-counter-item">
+                                <h3><span class="counter">2</span>M</h3>
+                                <p>Followers</p>
+                            </div>
+                            <div class="team-counter-item">
+                                <h3><span class="counter">20</span>K</h3>
+                                <p>Following</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Team Item End -->
                 </div>
-                <ul role="list" class="mb-8 space-y-4 text-left">
-                    <li class="flex items-center space-x-3">
-                        <svg class="flex-shrink-0 w-5 h-5 text-sky-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                        <span>20 Keywords Optimization</span>
-                    </li>
-                    <li class="flex items-center space-x-3">
-                        <svg class="flex-shrink-0 w-5 h-5 text-sky-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                        <span>Advanced On-Page & Off-Page</span>
-                    </li>
-                    <li class="flex items-center space-x-3">
-                        <svg class="flex-shrink-0 w-5 h-5 text-sky-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                        <span>Content Strategy</span>
-                    </li>
-                     <li class="flex items-center space-x-3">
-                        <svg class="flex-shrink-0 w-5 h-5 text-sky-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                        <span>Bi-Weekly Reporting</span>
-                    </li>
-                </ul>
-                <a href="{{ route('contact') }}" class="text-white bg-sky-600 hover:bg-sky-700 focus:ring-4 focus:ring-sky-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center transition-colors shadow-lg shadow-sky-200">Get started</a>
-            </div>
-            <!-- Pricing Card 3 -->
-            <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-slate-900 bg-white rounded-2xl border border-slate-100 shadow-sm xl:p-8 dark:bg-gray-800 dark:text-white hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                <h3 class="mb-4 text-2xl font-semibold">Enterprise</h3>
-                <p class="font-light text-slate-500 sm:text-lg dark:text-gray-400">For large scale operations.</p>
-                <div class="flex justify-center items-baseline my-8">
-                    <span class="mr-2 text-5xl font-extrabold">$999</span>
-                    <span class="text-slate-500 dark:text-gray-400">/month</span>
+
+                <div class="col-lg-12 order-4">
+                    <!-- Section Footer Text Start -->
+                    <div class="section-footer-text wow fadeInUp" data-wow-delay="0.8s">
+                        <p>Meet the Creators Behind the Campaign Magic. <a href="team.html">See All Influencers</a></p>
+                    </div>
+                    <!-- Section Footer Text End -->
                 </div>
-                <ul role="list" class="mb-8 space-y-4 text-left">
-                    <li class="flex items-center space-x-3">
-                        <svg class="flex-shrink-0 w-5 h-5 text-sky-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                        <span>Unlimited Keywords</span>
-                    </li>
-                    <li class="flex items-center space-x-3">
-                        <svg class="flex-shrink-0 w-5 h-5 text-sky-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                        <span>Full SEO Suite</span>
-                    </li>
-                    <li class="flex items-center space-x-3">
-                        <svg class="flex-shrink-0 w-5 h-5 text-sky-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                        <span>Dedicated Manager</span>
-                    </li>
-                     <li class="flex items-center space-x-3">
-                        <svg class="flex-shrink-0 w-5 h-5 text-sky-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                        <span>Custom Reporting</span>
-                    </li>
-                </ul>
-                <a href="{{ route('contact') }}" class="text-white bg-slate-900 hover:bg-slate-800 focus:ring-4 focus:ring-slate-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center transition-colors">Contact Sales</a>
             </div>
         </div>
     </div>
-</section>
+    <!-- Our Team Section End -->
 
+    <!-- Our Pricing Section Start -->
+    <div class="our-pricing bg-section">
+        <div class="container">
+            <div class="row section-row">
+                <div class="col-lg-12">
+                    <!-- Section Title Start -->
+                    <div class="section-title section-title-center">
+                        <h3 class="wow fadeInUp">Pricing Plan</h3>
+                        <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Flexible plans for every creator <span>and business</span></h2>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+            </div>
 
+            <div class="row">                                
+                <div class="col-lg-4 col-md-6">
+                    <!-- Pricing Box Start -->
+                    <div class="pricing-item box-bg-shape wow fadeInUp">
+                        <!-- Pricing Header Start -->
+                        <div class="pricing-header">
+                            <!-- Icon Box Strat -->
+                            <div class="icon-box">
+                                <img src="images/icon-pricing-1.svg" alt="">
+                            </div>
+                            <!-- Icon Box End -->
 
-{{-- new hero section  --}}
- <script>
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-  </script>
+                            <!-- Pricing Header Content Start -->
+                            <div class="pricing-header-content">
+                                <h3>Basic plan</h3>
+                                <h2>$39.00<sub>/month</sub></h2>
+                                <p>Perfect for small brand & campaigns</p>
+                            </div>
+                            <!-- Pricing Header Content End -->
+                        </div>
+                        <!-- Pricing Header End -->
 
-  <style>
-    .animate-slide-in-left {
-      animation: slideLeft 1s ease forwards;
-      opacity: 0;
-    }
-    .animate-slide-in-right {
-      animation: slideRight 1s ease forwards;
-      opacity: 0;
-    }
-    @keyframes slideLeft {
-      from { transform: translateX(-40px); opacity: 0; }
-      to { transform: translateX(0); opacity: 1; }
-    }
-    @keyframes slideRight {
-      from { transform: translateX(40px); opacity: 0; }
-      to { transform: translateX(0); opacity: 1; }
-    }
-  </style>
+                        <!-- Pricing body Start -->
+                        <div class="pricing-body">
+                            <ul>
+                                <li>3 Influencer Collaborations</li>
+                                <li>Campaign Strategy & Execution</li>
+                                <li>Dedicated Campaign Manager</li>
+                                <li>Custom Reporting Dashboard</li>
+                            </ul>
+                        </div>
+                        <!-- Pricing body End -->
 
-{{-- end new hero section  --}}
+                        <!-- Readmore Button Start -->
+                        <div class="readmore-btn">
+                            <a href="contact.html">
+                                <img src="images/arrow-white.svg" alt="">
+                            </a>
+                        </div>
+                        <!-- Readmore Button End -->
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <!-- Pricing Box Start -->
+                    <div class="pricing-item box-bg-shape highlighted-box wow fadeInUp" data-wow-delay="0.2s">
+                        <!-- Pricing Header Start -->
+                        <div class="pricing-header">
+                            <!-- Icon Box Strat -->
+                            <div class="icon-box">
+                                <img src="images/icon-pricing-2.svg" alt="">
+                            </div>
+                            <!-- Icon Box End -->
 
+                            <!-- Pricing Header Content Start -->
+                            <div class="pricing-header-content">
+                                <h3>Growth plan</h3>
+                                <h2>$49.00<sub>/month</sub></h2>
+                                <p>Perfect for medium brand campaign</p>
+                            </div>
+                            <!-- Pricing Header Content End -->
+                        </div>
+                        <!-- Pricing Header End -->
+                        
+                        <!-- Pricing body Start -->
+                        <div class="pricing-body">
+                            <ul>
+                                <li>4 Influencer Collaborations</li>
+                                <li>Campaign Strategy & Execution</li>
+                                <li>Dedicated Campaign Manager</li>
+                                <li>Custom Reporting Dashboard</li>
+                            </ul>
+                        </div>
+                        <!-- Pricing body End -->
+
+                        <!-- Readmore Button Start -->
+                        <div class="readmore-btn">
+                            <a href="contact.html">
+                                <img src="images/arrow-white.svg" alt="">
+                            </a>
+                        </div>
+                        <!-- Readmore Button End -->
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <!-- Pricing Box Start -->
+                    <div class="pricing-item box-bg-shape wow fadeInUp" data-wow-delay="0.4s">
+                        <!-- Pricing Header Start -->
+                        <div class="pricing-header">
+                            <!-- Icon Box Strat -->
+                            <div class="icon-box">
+                                <img src="images/icon-pricing-3.svg" alt="">
+                            </div>
+                            <!-- Icon Box End -->
+
+                            <!-- Pricing Header Content Start -->
+                            <div class="pricing-header-content">
+                                <h3>Pro Plan</h3>
+                                <h2>$59.00<sub>/month</sub></h2>
+                                <p>Perfect for larg brand & campaigns</p>
+                            </div>
+                            <!-- Pricing Header Content End -->
+                        </div>
+                        <!-- Pricing Header End -->
+
+                        <!-- Pricing body Start -->
+                        <div class="pricing-body">
+                            <ul>
+                                <li>5 Influencer Collaborations</li>
+                                <li>Campaign Strategy & Execution</li>
+                                <li>Dedicated Campaign Manager</li>
+                                <li>Custom Reporting Dashboard</li>
+                            </ul>
+                        </div>
+                        <!-- Pricing body End -->
+
+                        <!-- Readmore Button Start -->
+                        <div class="readmore-btn">
+                            <a href="contact.html">
+                                <img src="images/arrow-white.svg" alt="">
+                            </a>
+                        </div>
+                        <!-- Readmore Button End -->
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <!-- Pricing Benefits List Start -->
+                    <div class="pricing-benefit-list wow fadeInUp" data-wow-delay="0.6s">
+                        <ul>
+                            <li><img src="images/icon-pricing-benefit-1.svg" alt="">Get 30 day free trial</li>
+                            <li><img src="images/icon-pricing-benefit-2.svg" alt="">No any hidden fees pay</li>
+                            <li><img src="images/icon-pricing-benefit-3.svg" alt="">You can cancel anytime </li>
+                        </ul>
+                    </div>
+                    <!-- Pricing Benefits List End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Pricing Section End -->
+
+    <!-- Our Scrolling Ticker Start -->
+    <div class="our-scrolling-ticker">
+        <!-- Scrolling Ticker Start -->
+        <div class="scrolling-ticker-box">
+            <div class="scrolling-content">
+                <span><img src="images/asterisk-icon.svg" alt="">Real Results</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Brand Growth</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Social Buzz</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Real Results</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Brand Growth</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Social Buzz</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Real Results</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Brand Growth</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Social Buzz</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Real Results</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Brand Growth</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Social Buzz</span>
+            </div>
+
+            <div class="scrolling-content">
+                <span><img src="images/asterisk-icon.svg" alt="">Real Results</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Brand Growth</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Social Buzz</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Real Results</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Brand Growth</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Social Buzz</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Real Results</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Brand Growth</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Social Buzz</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Real Results</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Brand Growth</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Social Buzz</span>
+            </div>
+        </div>
+        <!-- Scrolling Ticker End -->
+    </div>
+    <!-- Our Scrolling Ticker End -->
+
+    <!-- Our Testimonials Section Start -->
+    <div class="our-testimonials">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-md-6">
+                    <!-- Testimonials Content Box Start -->
+                    <div class="testimonials-content">
+                        <!-- Section Title Start -->
+                        <div class="section-title">
+                            <h3 class="wow fadeInUp">Testimonials</h3>
+                            <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">What our clients say about our work</h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.4s">We let our results speak through the voices of our clients. From startups to global brands, our partners share how our influencer marketing strategies helped them grow.</p>
+                        </div>
+                        <!-- Section Title End -->
+
+                        <!-- Testimonial Button Start -->
+                        <div class="testimonial-btn wow fadeInUp" data-wow-delay="0.6s">
+                            <a href="testimonials.html" class="btn-default">view all reviews</a>
+                        </div>
+                        <!-- Testimonial Button End -->
+                    </div>
+                    <!-- Testimonial Content Box End -->
+                </div>
+
+                <div class="col-lg-5 col-md-6">
+                    <!-- Testimonial Image Start -->
+                    <div class="testimonial-image wow fadeInUp" data-wow-delay="0.2s">
+                        <figure>
+                            <img src="images/testimonial-image.png" alt="">
+                        </figure>
+                    </div>
+                    <!-- Testimonial Image End -->
+                </div>
+
+                <div class="col-lg-12">
+                    <!-- Testimonial Slider Start -->
+                    <div class="testimonial-slider">
+                        <div class="swiper">
+                            <div class="swiper-wrapper" data-cursor-text="Drag">
+                                <!-- Testimonial Slide Start -->
+                                <div class="swiper-slide">
+                                    <div class="testimonial-item">
+                                        <div class="testimonial-item-content">
+                                            <h3>“Our campaign reached over 2 million people in just 10 days! The team made influencer collaboration effortless and results-driven Working with this platform helped us grow brand awareness and sales faster paid ad strategy final reporting, everything was seamless we'll definitely partner again!”</h3>
+                                        </div>
+                                        <div class="author-content">
+                                            <h3>Samantha Lee</h3>
+                                            <p>Head of Influencer</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Testimonial Slide End -->
+                                
+                                <!-- Testimonial Slide Start -->
+                                <div class="swiper-slide">
+                                    <div class="testimonial-item">
+                                        <div class="testimonial-item-content">
+                                            <h3>“Our campaign reached over 3 million people in just 10 days! The team made influencer collaboration effortless and results-driven Working with this platform helped us grow brand awareness and sales faster paid ad strategy final reporting, everything was seamless we'll definitely partner again!”</h3>
+                                        </div>
+                                        <div class="author-content">
+                                            <h3>Theresa Webb</h3>
+                                            <p>Senior Influencer Manager</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Testimonial Slide End -->
+
+                                <!-- Testimonial Slide Start -->
+                                <div class="swiper-slide">
+                                    <div class="testimonial-item">
+                                        <div class="testimonial-item-content">
+                                            <h3>“Our campaign reached over 4 million people in just 10 days! The team made influencer collaboration effortless and results-driven Working with this platform helped us grow brand awareness and sales faster paid ad strategy final reporting, everything was seamless we'll definitely partner again!”</h3>
+                                        </div>
+                                        <div class="author-content">
+                                            <h3>Darrell Steward</h3>
+                                            <p>Influencer Coordinator</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Testimonial Slide End -->
+                            </div>
+                            <div class="testimonial-pagination"></div>
+                        </div>
+                    </div>
+                    <!-- Testimonial Slider End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Testimonials Section End -->
+
+    <!-- Our Faqs Section Start -->
+    <div class="our-faqs bg-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <!-- Faq Image Start -->
+                    <div class="faq-image wow fadeInUp" data-wow-delay="0.2s">
+                        <!-- Faq Image Start -->
+                        <div class="faq-img">
+                            <figure class="image-anime">
+                                <img src="images/faq-image.jpg" alt="">
+                            </figure>
+                        </div>
+                        <!-- Faq Image End -->
+
+                        <!-- Faq CTA Box Start -->
+                        <div class="faq-cta-box">
+                            <div class="icon-box">
+                                <img src="images/icon-headphone.svg" alt="">
+                            </div>
+                            <div class="faq-cta-content">
+                                <h3>Have Any Question?</h3>
+                                <p><a href="tel:+132465789">+(132) 465 789</a></p>
+                            </div>
+                        </div>
+                        <!-- Faq CTA Box End -->
+                    </div>
+                    <!-- Faq Image End -->
+                </div>
+
+                <div class="col-lg-6">
+                    <!-- Faqs Content Start -->
+                    <div class="faqs-content">
+                        <!-- Section Title Start -->
+                        <div class="section-title">
+                            <h3 class="wow fadeInUp">FAQ's</h3>
+                            <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Your questions, <span>our answer</span></h2>
+                        </div>
+                        <!-- Section Title End -->
+
+                        <!-- FAQ Accordion Start -->
+                        <div class="faq-accordion" id="accordion">
+                            <!-- FAQ Item Start -->
+                            <div class="accordion-item wow fadeInUp">
+                                <h2 class="accordion-header" id="heading1">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                        1. What is influencer marketing?
+                                    </button>
+                                </h2>
+                                <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#accordion">
+                                    <div class="accordion-body">
+                                        <p>We run campaigns on Instagram, YouTube, TikTok, Facebook, Twitter, and LinkedIn — depending on your goals and audience.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FAQ Item End -->
+
+                            <!-- FAQ Item Start -->
+                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.2s">
+                                <h2 class="accordion-header" id="heading2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                        2. What platforms do you support?
+                                    </button>
+                                </h2>
+                                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordion">
+                                    <div class="accordion-body">
+                                        <p>We run campaigns on Instagram, YouTube, TikTok, Facebook, Twitter, and LinkedIn — depending on your goals and audience.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FAQ Item End -->
+
+                            <!-- FAQ Item Start -->
+                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
+                                <h2 class="accordion-header" id="heading3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                        3. How do you measure campaign success?
+                                    </button>
+                                </h2>
+                                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordion">
+                                    <div class="accordion-body">
+                                        <p>We run campaigns on Instagram, YouTube, TikTok, Facebook, Twitter, and LinkedIn — depending on your goals and audience.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FAQ Item End -->
+
+                            <!-- FAQ Item Start -->
+                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.6s">
+                                <h2 class="accordion-header" id="heading4">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                        4. Can I review content before it goes live?
+                                    </button>
+                                </h2>
+                                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordion">
+                                    <div class="accordion-body">
+                                        <p>We run campaigns on Instagram, YouTube, TikTok, Facebook, Twitter, and LinkedIn — depending on your goals and audience.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FAQ Item End -->
+                        </div>
+                        <!-- FAQ Accordion End -->
+                    </div>
+                    <!-- Faqs Content End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Faqs Section End -->
+
+    <!-- Our Blog Section Start -->
+    <div class="our-blog">
+        <div class="container">
+            <div class="row section-row">
+                <div class="col-lg-12">
+                    <!-- Section Title Start -->
+                    <div class="section-title section-title-center">
+                        <h3 class="wow fadeInUp">latest blog</h3>
+                        <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Explore our latest insights on <span>AI video creation</span></h2>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <!-- Post Item Start -->
+                    <div class="post-item box-bg-shape wow fadeInUp">
+                        <!-- Post Featured Image Start-->
+                        <div class="post-featured-image">
+                            <a href="blog-single.html" data-cursor-text="View">
+                                <figure class="image-anime">
+                                    <img src="images/post-1.jpg" alt="">
+                                </figure>    
+                            </a>                            
+                        </div>
+                        <!-- Post Featured Image End -->
+
+                        <!-- Post Item Content Start -->
+                        <div class="post-item-content">
+                            <h2><a href="blog-single.html">Top 10 Influencer Marketing Trends in 2025</a></h2>
+                        </div>
+                        <!-- Post Item Content End -->
+
+                        <!-- Post Read More Button Start -->
+                        <div class="readmore-btn">
+                            <a href="blog-single.html"><img src="images/arrow-white.svg" alt=""></a>
+                        </div>
+                        <!-- Post Read More Button End -->
+                    </div>
+                    <!-- Post Item End -->
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <!-- Post Item Start -->
+                    <div class="post-item box-bg-shape wow fadeInUp" data-wow-delay="0.2s">
+                        <!-- Post Featured Image Start-->
+                        <div class="post-featured-image">
+                            <a href="blog-single.html" data-cursor-text="View">
+                                <figure class="image-anime">
+                                    <img src="images/post-2.jpg" alt="">
+                                </figure>    
+                            </a>                            
+                        </div>
+                        <!-- Post Featured Image End -->
+
+                        <!-- Post Item Content Start -->
+                        <div class="post-item-content">
+                            <h2><a href="blog-single.html">How to Choose the Influencer for Your Brand</a></h2>
+                        </div>
+                        <!-- Post Item Content End -->
+
+                        <!-- Post Read More Button Start -->
+                        <div class="readmore-btn">
+                            <a href="blog-single.html"><img src="images/arrow-white.svg" alt=""></a>
+                        </div>
+                        <!-- Post Read More Button End -->
+                    </div>
+                    <!-- Post Item End -->
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <!-- Post Item Start -->
+                    <div class="post-item box-bg-shape wow fadeInUp" data-wow-delay="0.4s">
+                        <!-- Post Featured Image Start-->
+                        <div class="post-featured-image">
+                            <a href="blog-single.html" data-cursor-text="View">
+                                <figure class="image-anime">
+                                    <img src="images/post-3.jpg" alt="">
+                                </figure>    
+                            </a>                            
+                        </div>
+                        <!-- Post Featured Image End -->
+
+                        <!-- Post Item Content Start -->
+                        <div class="post-item-content">
+                            <h2><a href="blog-single.html">AI in Influencer Marketing: What's Next?</a></h2>
+                        </div>
+                        <!-- Post Item Content End -->
+
+                        <!-- Post Read More Button Start -->
+                        <div class="readmore-btn">
+                            <a href="blog-single.html"><img src="images/arrow-white.svg" alt=""></a>
+                        </div>
+                        <!-- Post Read More Button End -->
+                    </div>
+                    <!-- Post Item End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Blog Section End -->
+
+ 
 @endsection

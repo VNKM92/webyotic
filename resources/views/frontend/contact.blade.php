@@ -8,71 +8,164 @@
     </div>
 </section>
 @endif
-<section class="bg-white dark:bg-gray-900">
-    <div class="py-12 lg:py-20 px-4 mx-auto max-w-screen-xl">
-        <div class="mx-auto max-w-screen-md text-center mb-10 lg:mb-16">
-            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-slate-900 dark:text-white">Contact Us</h2>
-            <p class="mb-8 font-light text-slate-500 lg:mb-16 sm:text-xl dark:text-gray-400">Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know.</p>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-start">
-            
-            <!-- Contact Info -->
-            <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 dark:bg-gray-800 dark:border-gray-700">
-                <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">Get in touch</h3>
-                <div class="space-y-6">
-                    <div class="flex items-start">
-                         <div class="flex-shrink-0 w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center text-sky-600 dark:bg-sky-900 dark:text-sky-300">
-                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                         </div>
-                         <div class="ml-4">
-                             <h4 class="text-lg font-semibold text-slate-900 dark:text-white">Visit us</h4>
-                             <p class="mt-1 text-slate-500 dark:text-gray-400">123 SEO Street, Digital City, 10001</p>
-                             <p class="text-slate-500 dark:text-gray-400">New York, USA</p>
-                         </div>
+<!-- Page Header Start -->
+    <div class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Page Header Box Start -->
+                    <div class="page-header-box">
+                        <h1 class="wow fadeInUp" data-cursor="-opaque">Contact us</h1>
+                        <nav class="wow fadeInUp" data-wow-delay="0.2s">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">contact us</li>
+                            </ol>
+                        </nav>
                     </div>
-                    
-                    <div class="flex items-start">
-                        <div class="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center text-orange-600 dark:bg-orange-900 dark:text-orange-300">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                        </div>
-                        <div class="ml-4">
-                            <h4 class="text-lg font-semibold text-slate-900 dark:text-white">Email us</h4>
-                            <p class="mt-1 text-slate-500 dark:text-gray-400">info@webyotic.com</p>
-                            <p class="text-slate-500 dark:text-gray-400">support@webyotic.com</p>
-                        </div>
-                   </div>
+                    <!-- Page Header Box End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
 
-                   <div class="flex items-start">
-                        <div class="flex-shrink-0 w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center text-sky-600 dark:bg-sky-900 dark:text-sky-300">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+    <!-- Page Contact Us Start -->
+    <div class="page-contact-us">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <!-- Contact Us Content Start -->
+                    <div class="contact-us-content">
+                        <!-- Section Title Start -->
+                        <div class="section-title">
+                            <h3 class="wow fadeInUp">Let's Work together</h3>
+                            <h2 class="wow fadeInUp" data-cursor="-opaque" data-wow-delay="0.2s">Let's start growing your <span>with influence</span></h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.4s">Let's start growing your brand with influence-driven strategies connect, convert, and inspire.</p>
                         </div>
-                        <div class="ml-4">
-                            <h4 class="text-lg font-semibold text-slate-900 dark:text-white">Call us</h4>
-                            <p class="mt-1 text-slate-500 dark:text-gray-400">+1 (555) 123-4567</p>
-                            <p class="text-slate-500 dark:text-gray-400">Mon - Fri, 8am - 5pm</p>
+                        <!-- Section Title End -->
+
+                        <!-- Contact CTA Item Start -->
+                        <div class="contact-cta-item wow fadeInUp" data-wow-delay="0.6s">
+                            <div class="icon-box">
+                                <img src="images/icon-headphone.svg" alt="">
+                            </div>
+                            <div class="contact-cta-item-content">
+                                <p>Call support center 24/7</p>
+                                <h3><a href="tel:791241450">+(001) 279 124 1450</a></h3>
+                            </div>
                         </div>
-                   </div>
+                        <!-- Contact CTA Item End -->
+
+                        <!-- Contact Info List Start -->
+                        <div class="contact-info-list wow fadeInUp" data-wow-delay="0.8s">
+                            <!-- Contact Info Item Start -->
+                            <div class="contact-info-item">
+                                <div class="icon-box">
+                                    <img src="images/icon-mail-gradient.svg" alt="">
+                                </div>
+                                <div class="contact-item-content">
+                                    <h3>Email</h3>
+                                    <p><a href="mailto:support@domain.com">support@domain.com</a></p>
+                                </div>
+                            </div>
+                            <!-- Contact Info Item End -->
+
+                            <!-- Contact Info Item Start -->
+                            <div class="contact-info-item">
+                                <div class="icon-box">
+                                    <img src="images/icon-location-gradient.svg" alt="">
+                                </div>
+                                <div class="contact-item-content">
+                                    <h3>Location</h3>
+                                    <p>New York Brooklyn, UK 0018</p>
+                                </div>
+                            </div>
+                            <!-- Contact Info Item End -->
+                        </div>
+                        <!-- Contact Info List End -->
+                    </div>
+                    <!-- Contact Us Content End -->
+                </div>
+
+                <div class="col-lg-6">
+                    <!-- Contact Us Form Start -->
+                    <div class="contact-us-form dark-section">
+                        <!-- Section Title Start -->
+                        <div class="section-title">
+                            <h2 class="wow fadeInUp" data-cursor="-opaque">Send us a message</h2>
+                        </div>
+                        <!-- Section Title End -->
+
+                        <!-- Contact Form Start -->
+                        <div class="contact-form">
+                            <form id="contactForm" action="#" method="POST" data-toggle="validator" class="wow fadeInUp" data-wow-delay="0.2s">
+                                <div class="row">
+                                    <div class="form-group col-md-6 mb-4">
+                                        <input type="text" name="fname" class="form-control" id="fname" placeholder="First name" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+
+                                    <div class="form-group col-md-6 mb-4">
+                                        <input type="text" name="lname" class="form-control" id="lname" placeholder="Last name" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+
+                                    <div class="form-group col-md-6 mb-4">
+                                        <input type="email" name ="email" class="form-control" id="email" placeholder="E-mail" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+
+                                    <div class="form-group col-md-6 mb-4">
+                                        <input type="text" name="phone" class="form-control" id="phone" placeholder="Phone" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+
+                                    <div class="form-group col-md-12 mb-5">
+                                        <textarea name="message" class="form-control" id="message" rows="3" placeholder="Write message..."></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <button type="submit" class="btn-default btn-highlighted">submit message</button>
+                                        <div id="msgSubmit" class="h3 hidden"></div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- Contact Form End -->
+                    </div>
+                    <!-- Contact Us Form End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Contact Us End -->
+
+    <!-- Google Map Start -->
+    <div class="google-map">
+        <div class="container">
+            <div class="row section-row">
+                <div class="col-lg-12">
+                    <!-- Section Title Start -->
+                    <div class="section-title section-title-center">
+                        <h3 class="wow fadeInUp">Location</h3>
+                        <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Find us and connect <span>with confidence</span></h2>
+                    </div>
+                    <!-- Section Title End -->
                 </div>
             </div>
 
-            <!-- Contact Form -->
-            <form action="#" class="space-y-6 bg-white p-2 dark:bg-gray-900">
-                <div>
-                    <label for="email" class="block mb-2 text-sm font-medium text-slate-900 dark:text-gray-300">Your email</label>
-                    <input type="email" id="email" class="shadow-sm bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-sky-500 dark:focus:border-sky-500" placeholder="name@flowbite.com" required>
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Google Map IFrame Start -->
+                    <div class="google-map-iframe">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96737.10562045308!2d-74.08535042841811!3d40.739265258395164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1703158537552!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <!-- Google Map IFrame End -->
                 </div>
-                <div>
-                    <label for="subject" class="block mb-2 text-sm font-medium text-slate-900 dark:text-gray-300">Subject</label>
-                    <input type="text" id="subject" class="block p-3 w-full text-sm text-slate-900 bg-slate-50 rounded-lg border border-slate-300 shadow-sm focus:ring-sky-500 focus:border-sky-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-sky-500 dark:focus:border-sky-500" placeholder="Let us know how we can help you" required>
-                </div>
-                <div class="sm:col-span-2">
-                    <label for="message" class="block mb-2 text-sm font-medium text-slate-900 dark:text-gray-400">Your message</label>
-                    <textarea id="message" rows="6" class="block p-3 w-full text-sm text-slate-900 bg-slate-50 rounded-lg shadow-sm border border-slate-300 focus:ring-sky-500 focus:border-sky-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-sky-500 dark:focus:border-sky-500" placeholder="Leave a comment..."></textarea>
-                </div>
-                <button type="submit" class="py-3 px-6 text-sm font-medium text-center text-white rounded-lg bg-sky-600 sm:w-fit hover:bg-sky-700 focus:ring-4 focus:outline-none focus:ring-sky-300 dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-sky-800 transition-colors">Send message</button>
-            </form>
+            </div>
         </div>
     </div>
-</section>
+    <!-- Google Map End -->
 @endsection

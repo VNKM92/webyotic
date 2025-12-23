@@ -7,199 +7,585 @@
         {!! $page->content !!}
     </div>
 @endif
-<!-- Services Hero Section -->
-<section class="relative bg-slate-900 overflow-hidden py-24 lg:py-32">
-    <div class="absolute inset-0 z-0">
-        <!-- Abstract background -->
-        <div class="absolute top-0 left-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center opacity-10"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-900/90 to-slate-900"></div>
-    </div>
-    <div class="container mx-auto px-4 relative z-10 text-center">
-        <span class="inline-block py-1 px-3 rounded-full bg-sky-500/20 text-sky-300 text-sm font-semibold mb-6 border border-sky-500/30 animate-fade-in-up">What We Do</span>
-        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight animate-fade-in-up" style="animation-delay: 0.1s;">
-            Comprehensive <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-orange-400">Digital Solutions</span>
-        </h1>
-        <p class="text-xl text-slate-300 mb-10 max-w-3xl mx-auto animate-fade-in-up" style="animation-delay: 0.2s;">
-            From high-ranking SEO strategies to cutting-edge web development, we provide end-to-end services to elevate your brand.
-        </p>
-    </div>
-</section>
 
-<!-- Main Services Grid -->
-<section class="py-20 bg-slate-50 dark:bg-gray-900">
-    <div class="container mx-auto px-4 max-w-screen-xl">
-        @if(isset($services) && $services->count())
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            @foreach($services as $service)
-            <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-slate-100 dark:border-gray-700 hover:border-sky-500 dark:hover:border-sky-500 transition-all duration-300 group hover:-translate-y-2">
-                <div class="w-14 h-14 bg-sky-100 dark:bg-sky-900 rounded-xl flex items-center justify-center mb-6 text-sky-600 dark:text-sky-300 group-hover:bg-sky-600 group-hover:text-white transition-colors">
-                    <span class="text-xl">{{ $service->icon }}</span>
-                </div>
-                <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">{{ $service->title }}</h3>
-                <p class="text-slate-600 dark:text-gray-400 mb-6">{{ $service->short_description }}</p>
-                @if(!empty($service->image))
-                <img src="{{ $service->image }}" alt="{{ $service->title }}" class="rounded-lg shadow mt-4">
-                @endif
-            </div>
-            @endforeach
-        </div>
-        @endif
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            <!-- Service 1: SEO -->
-            <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-slate-100 dark:border-gray-700 hover:border-sky-500 dark:hover:border-sky-500 transition-all duration-300 group hover:-translate-y-2">
-                <div class="w-14 h-14 bg-sky-100 dark:bg-sky-900 rounded-xl flex items-center justify-center mb-6 text-sky-600 dark:text-sky-300 group-hover:bg-sky-600 group-hover:text-white transition-colors">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-                </div>
-                <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">Search Engine Optimization</h3>
-                <p class="text-slate-600 dark:text-gray-400 mb-6">Dominate search results with our data-driven SEO strategies. We optimize your site for visibility, traffic, and conversions.</p>
-                <ul class="space-y-2 text-slate-500 dark:text-gray-400 mb-6">
-                    <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>On-Page & Off-Page SEO</li>
-                    <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Keyword Research</li>
-                    <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Technical Audits</li>
-                </ul>
-            </div>
 
-            <!-- Service 2: Web Development -->
-            <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-slate-100 dark:border-gray-700 hover:border-orange-500 dark:hover:border-orange-500 transition-all duration-300 group hover:-translate-y-2">
-                <div class="w-14 h-14 bg-orange-100 dark:bg-orange-900 rounded-xl flex items-center justify-center mb-6 text-orange-600 dark:text-orange-300 group-hover:bg-orange-600 group-hover:text-white transition-colors">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+<!-- Page Header Start -->
+    <div class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Page Header Box Start -->
+                    <div class="page-header-box">
+                        <h1 class="wow fadeInUp" data-cursor="-opaque">Our services</h1>
+                        <nav class="wow fadeInUp" data-wow-delay="0.2s">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Our services</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <!-- Page Header Box End -->
                 </div>
-                <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">Web Development</h3>
-                <p class="text-slate-600 dark:text-gray-400 mb-6">Custom websites built for performance, security, and scale. We bring your vision to life with clean, robust code.</p>
-                <ul class="space-y-2 text-slate-500 dark:text-gray-400 mb-6">
-                    <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Full-Stack Development</li>
-                    <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>E-commerce Solutions</li>
-                    <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>CMS Integration</li>
-                </ul>
             </div>
-
-            <!-- Service 3: Content Marketing -->
-            <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-slate-100 dark:border-gray-700 hover:border-sky-500 dark:hover:border-sky-500 transition-all duration-300 group hover:-translate-y-2">
-                <div class="w-14 h-14 bg-sky-100 dark:bg-sky-900 rounded-xl flex items-center justify-center mb-6 text-sky-600 dark:text-sky-300 group-hover:bg-sky-600 group-hover:text-white transition-colors">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
-                </div>
-                <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">Content Marketing</h3>
-                <p class="text-slate-600 dark:text-gray-400 mb-6">Engage your audience with compelling content that tells your story and establishes your authority in the industry.</p>
-                <ul class="space-y-2 text-slate-500 dark:text-gray-400 mb-6">
-                    <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Blog Writing</li>
-                    <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Copywriting</li>
-                    <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Social Media Content</li>
-                </ul>
-            </div>
-
-            <!-- Service 4: UI/UX Design -->
-            <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-slate-100 dark:border-gray-700 hover:border-orange-500 dark:hover:border-orange-500 transition-all duration-300 group hover:-translate-y-2">
-                <div class="w-14 h-14 bg-orange-100 dark:bg-orange-900 rounded-xl flex items-center justify-center mb-6 text-orange-600 dark:text-orange-300 group-hover:bg-orange-600 group-hover:text-white transition-colors">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                </div>
-                <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">UI/UX Design</h3>
-                <p class="text-slate-600 dark:text-gray-400 mb-6">Create intuitive and beautiful interfaces that users love. We focus on user journeys and aesthetic appeal.</p>
-                <ul class="space-y-2 text-slate-500 dark:text-gray-400 mb-6">
-                    <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Wireframing & Prototyping</li>
-                    <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Mobile App Design</li>
-                    <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Brand Identity</li>
-                </ul>
-            </div>
-
-            <!-- Service 5: Social Media Marketing -->
-            <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-slate-100 dark:border-gray-700 hover:border-sky-500 dark:hover:border-sky-500 transition-all duration-300 group hover:-translate-y-2">
-                <div class="w-14 h-14 bg-sky-100 dark:bg-sky-900 rounded-xl flex items-center justify-center mb-6 text-sky-600 dark:text-sky-300 group-hover:bg-sky-600 group-hover:text-white transition-colors">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11"/></svg>
-                </div>
-                <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">Social Media Marketing</h3>
-                <p class="text-slate-600 dark:text-gray-400 mb-6">Build a loyal community around your brand. We manage your social presence and run targeted ad campaigns.</p>
-                <ul class="space-y-2 text-slate-500 dark:text-gray-400 mb-6">
-                    <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Strategy & Planning</li>
-                    <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Community Management</li>
-                    <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Paid Advertising</li>
-                </ul>
-            </div>
-
-            <!-- Service 6: Analytics & Reporting -->
-            <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-slate-100 dark:border-gray-700 hover:border-orange-500 dark:hover:border-orange-500 transition-all duration-300 group hover:-translate-y-2">
-                <div class="w-14 h-14 bg-orange-100 dark:bg-orange-900 rounded-xl flex items-center justify-center mb-6 text-orange-600 dark:text-orange-300 group-hover:bg-orange-600 group-hover:text-white transition-colors">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
-                </div>
-                <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">Analytics & Reporting</h3>
-                <p class="text-slate-600 dark:text-gray-400 mb-6">Make informed decisions with deep data insights. We track, analyze, and report on key performance metrics.</p>
-                <ul class="space-y-2 text-slate-500 dark:text-gray-400 mb-6">
-                    <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Custom Dashboards</li>
-                    <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Conversion Tracking</li>
-                    <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>ROI Analysis</li>
-                </ul>
-            </div>
-
         </div>
     </div>
-</section>
+    <!-- Page Header End -->
 
-<!-- Why Choose Us -->
-<section class="py-20 bg-white dark:bg-gray-800">
-    <div class="container mx-auto px-4 max-w-screen-xl">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6">Why Choose Webyotic?</h2>
-                <p class="text-lg text-slate-600 dark:text-gray-300 mb-8">
-                    We don't just deliver services; we deliver results. Our approach is rooted in understanding your unique business challenges and crafting bespoke solutions.
-                </p>
-                
-                <div class="space-y-6">
-                    <div class="flex">
-                        <div class="flex-shrink-0">
-                            <div class="flex items-center justify-center w-12 h-12 rounded-md bg-sky-500 text-white">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                            </div>
+    <!-- Page Services Section Start -->
+    <div class="page-services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <!-- Services Item Start -->
+                    <div class="service-item box-bg-shape wow fadeInUp">
+                        <div class="icon-box">
+                            <img src="images/icon-service-1.svg" alt="">
                         </div>
-                        <div class="ml-4">
-                            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Fast Turnaround</h3>
-                            <p class="mt-1 text-slate-500 dark:text-gray-400">We value your time. Our agile processes ensure quick delivery without compromising quality.</p>
+                        <div class="service-item-title">
+                            <h3><a href="service-single.html">Influencer Discovery</a></h3>
+                        </div>
+                        <div class="service-item-content">
+                            <p>Customized campaign strategies built around your goals.</p>
+                        </div>
+                        <div class="readmore-btn">
+                            <a href="service-single.html"><img src="images/arrow-white.svg" alt=""></a>
                         </div>
                     </div>
+                    <!-- Services Item End -->
+                </div>
                     
-                    <div class="flex">
-                        <div class="flex-shrink-0">
-                            <div class="flex items-center justify-center w-12 h-12 rounded-md bg-orange-500 text-white">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                            </div>
+                <div class="col-lg-4 col-md-6">
+                    <!-- Services Item Start -->
+                    <div class="service-item box-bg-shape wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="icon-box">
+                            <img src="images/icon-service-2.svg" alt="">
                         </div>
-                        <div class="ml-4">
-                            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Affordable Pricing</h3>
-                            <p class="mt-1 text-slate-500 dark:text-gray-400">Top-tier services shouldn't break the bank. We offer competitive pricing for startups and enterprises alike.</p>
+                        <div class="service-item-title">
+                            <h3><a href="service-single.html">Campaign Strategy</a></h3>
                         </div>
-                    </div>
-                    
-                    <div class="flex">
-                        <div class="flex-shrink-0">
-                            <div class="flex items-center justify-center w-12 h-12 rounded-md bg-sky-500 text-white">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-                            </div>
+                        <div class="service-item-content">
+                            <p>Customized campaign strategies built around your goals.</p>
                         </div>
-                        <div class="ml-4">
-                            <h3 class="text-lg font-bold text-slate-900 dark:text-white">24/7 Support</h3>
-                            <p class="mt-1 text-slate-500 dark:text-gray-400">We are always here for you. Our support team is ready to assist you whenever you need us.</p>
+                        <div class="readmore-btn">
+                            <a href="service-single.html"><img src="images/arrow-white.svg" alt=""></a>
                         </div>
                     </div>
+                    <!-- Services Item End -->
                 </div>
-            </div>
-            
-            <div class="relative">
-                <div class="relative rounded-2xl overflow-hidden shadow-2xl">
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Team meeting" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-sky-900/10"></div>
+
+                <div class="col-lg-4 col-md-6">
+                    <!-- Services Item Start -->
+                    <div class="service-item box-bg-shape wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="icon-box">
+                            <img src="images/icon-service-3.svg" alt="">
+                        </div>
+                        <div class="service-item-title">
+                            <h3><a href="service-single.html">Influencer Outreach</a></h3>
+                        </div>
+                        <div class="service-item-content">
+                            <p>Customized campaign strategies built around your goals.</p>
+                        </div>
+                        <div class="readmore-btn">
+                            <a href="service-single.html"><img src="images/arrow-white.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <!-- Services Item End -->
                 </div>
-                <div class="absolute -bottom-8 -left-8 w-40 h-40 bg-dots-pattern opacity-20"></div>
+
+                <div class="col-lg-4 col-md-6">
+                    <!-- Services Item Start -->
+                    <div class="service-item box-bg-shape wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="icon-box">
+                            <img src="images/icon-service-3.svg" alt="">
+                        </div>
+                        <div class="service-item-title">
+                            <h3><a href="service-single.html">Content Creation</a></h3>
+                        </div>
+                        <div class="service-item-content">
+                            <p>Customized campaign strategies built around your goals.</p>
+                        </div>
+                        <div class="readmore-btn">
+                            <a href="service-single.html"><img src="images/arrow-white.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <!-- Services Item End -->
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <!-- Services Item Start -->
+                    <div class="service-item box-bg-shape wow fadeInUp" data-wow-delay="0.8s">
+                        <div class="icon-box">
+                            <img src="images/icon-service-5.svg" alt="">
+                        </div>
+                        <div class="service-item-title">
+                            <h3><a href="service-single.html">Influencer Network</a></h3>
+                        </div>
+                        <div class="service-item-content">
+                            <p>Customized campaign strategies built around your goals.</p>
+                        </div>
+                        <div class="readmore-btn">
+                            <a href="service-single.html"><img src="images/arrow-white.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <!-- Services Item End -->
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <!-- Services Item Start -->
+                    <div class="service-item box-bg-shape wow fadeInUp" data-wow-delay="1s">
+                        <div class="icon-box">
+                            <img src="images/icon-service-6.svg" alt="">
+                        </div>
+                        <div class="service-item-title">
+                            <h3><a href="service-single.html">Audience Growth</a></h3>
+                        </div>
+                        <div class="service-item-content">
+                            <p>Customized campaign strategies built around your goals.</p>
+                        </div>
+                        <div class="readmore-btn">
+                            <a href="service-single.html"><img src="images/arrow-white.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <!-- Services Item End -->
+                </div>
             </div>
         </div>
     </div>
-</section>
+    <!-- Page Services Section End -->
 
-<!-- CTA -->
-<section class="py-20 bg-slate-900">
-    <div class="container mx-auto px-4 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Need a Custom Solution?</h2>
-        <p class="text-lg text-slate-400 mb-8 max-w-2xl mx-auto">Contact us today to discuss your project requirements and get a free quote.</p>
-        <a href="{{ route('contact') }}" class="inline-block bg-gradient-to-r from-sky-500 to-orange-500 text-white font-bold py-3 px-8 rounded-full hover:from-sky-600 hover:to-orange-600 transition-all shadow-lg transform hover:scale-105">Get in Touch</a>
+    <!-- Influencer Network Section Start -->
+    <div class="influencer-network bg-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <!-- Influencer Network Content Start -->
+                    <div class="influencer-network-content">
+                        <!-- Section Title Start -->
+                        <div class="section-title">
+                            <h3 class="wow fadeInUp">Influencer Network</h3>
+                            <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Authentic voices, trusted <span>by leading brands</span></h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.4s">Our influencer network is built on authenticity, creativity, and impact collaborate with trusted creators.</p>
+                        </div>
+                        <!-- Section Title End -->
+
+                        <!-- Influencer Network List Start -->
+                        <div class="influencer-network-list wow fadeInUp" data-wow-delay="0.6s">
+                            <ul>
+                                <li>Verified Global Database</li>
+                                <li>Niche-Specific Creator</li>
+                                <li>Data-Driven Performance</li>
+                                <li>AI-Powered Discovery Tools</li>
+                            </ul>
+                        </div>
+                        <!-- Influencer Network List End -->
+
+                        <!-- Influencer Network Body Start -->
+                        <div class="influencer-network-body wow fadeInUp" data-wow-delay="0.8s">
+                            <!-- Influencer Network Image Start -->
+                            <div class="network-body-image box-bg-shape">
+                                <figure class="image-anime">
+                                    <img src="images/network-body-image.jpg" alt="">
+                                </figure>
+
+                                <div class="readmore-btn">
+                                    <a href="contact.html">
+                                        <img src="images/arrow-white.svg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Influencer Network Image End -->
+
+                            <!-- Network Body Counter Box Start -->
+                            <div class="network-body-counter-box">
+                                <div class="icon-box">
+                                    <img src="images/icon-network-body.svg" alt="">
+                                </div>
+                                <div class="network-body-item-content">
+                                    <h2><span class="counter">95</span>%</h2>
+                                    <p>Customer Satisfaction Rate</p>
+                                </div>
+                            </div>
+                            <!-- Network Body Counter Box End -->
+                        </div>
+                        <!-- Influencer Network Body End -->
+                    </div>
+                    <!-- Influencer Network Content End -->
+                </div>
+
+                <div class="col-lg-6">
+                    <!-- Influencer Network Slider Start -->
+                    <div class="influencer-network-slider">
+                        <div class="swiper">
+                            <div class="swiper-wrapper" data-cursor-text="Drag">
+                                <!-- Influencer Network Slide Start -->
+                                <div class="swiper-slide">
+                                    <div class="influencer-network-image">
+                                        <figure>
+                                            <img src="images/influencer-network-img-1.png" alt="">
+                                        </figure>
+                                    </div>
+                                </div>
+                                <!-- Influencer Network Slide End -->
+
+                                <!-- Influencer Network Slide Start -->
+                                <div class="swiper-slide">
+                                    <div class="influencer-network-image">
+                                        <figure>
+                                            <img src="images/influencer-network-img-2.png" alt="">
+                                        </figure>
+                                    </div>
+                                </div>
+                                <!-- Influencer Network Slide End -->
+
+                                <!-- Influencer Network Slide Start -->
+                                <div class="swiper-slide">
+                                    <div class="influencer-network-image">
+                                        <figure>
+                                            <img src="images/influencer-network-img-3.png" alt="">
+                                        </figure>
+                                    </div>
+                                </div>
+                                <!-- Influencer Network Slide End -->
+                            </div>
+                            <div class="influencer-network-pagination"></div>
+                        </div>
+                    </div>
+                    <!-- Influencer Network Slider End -->
+                </div>
+            </div>
+        </div>
     </div>
-</section>
+    <!-- Influencer Network Section End -->
+
+    <!-- What We Do Section Start -->
+    <div class="what-we-do">
+        <div class="container">
+            <div class="row section-row align-items-center">
+                <div class="col-lg-6">
+                    <!-- Section Title Start -->
+                    <div class="section-title">
+                        <h3 class="wow fadeInUp">What We Do</h3>
+                        <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Connecting brands with trusted <span>social voices</span></h2>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+
+                <div class="col-lg-6">
+                    <!-- Section Title Content Start -->
+                    <div class="section-title-content wow fadeInUp" data-wow-delay="0.4s">
+                        <p>We specialize in pairing your brand with credible, influential creators who align with your values and speak authentically to your audience. By leveraging their trust and reach, we help you drive engagement.</p>
+                    </div>
+                    <!-- Section Title Content End -->
+                </div>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <!-- What We Do Image Start -->
+                    <div class="what-we-do-image">
+                        <figure class="image-anime reveal">
+                            <img src="images/what-we-do-image.jpg" alt="">
+                        </figure>
+                    </div>
+                    <!-- What We Do Image End -->
+                </div>
+
+                <div class="col-lg-6">
+                    <!-- What We Do Content Start -->
+                    <div class="what-we-do-content">
+                        <!-- What We Do Body Start -->
+                        <div class="what-we-do-body">
+                            <!-- What Do Body Item Start -->
+                            <div class="what-do-body-item wow fadeInUp" data-wow-delay="0.2s">
+                                <h3>Influencer Discovery & Vetting</h3>
+                                <p>We collaborate with a network of expert influencers who are trusted voices in their industries</p>
+                            </div>
+                            <!-- What Do Body Item End -->
+
+                            <!-- What Do Counter Box Start -->
+                            <div class="what-do-counter-box">
+                                <!-- What Do Counter Item Start -->
+                                <div class="what-do-counter-item">
+                                    <h2><span class="counter">80</span>+</h2>
+                                    <p>Countries Covered</p>
+                                </div>
+                                <!-- What Do Counter Item End -->
+
+                                <!-- What Do Counter Item Start -->
+                                <div class="what-do-counter-item">
+                                    <h2><span class="counter">6.2</span>x</h2>
+                                    <p>Avg. ROI Campaign</p>
+                                </div>
+                                <!-- What Do Counter Item End -->
+                            </div>
+                            <!-- What Do Counter Box End -->
+                        </div>
+                        <!-- What We Do Body End -->
+
+                        <!-- What Do Info Box Start -->
+                        <div class="what-do-info-box box-bg-shape wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="what-do-info-content">
+                                <h3>Influencer Outreach & Negotiation</h3>
+                                <p>We identify and connect you with the most relevant influencers who align with your brand's values, audience & goals. Each creator is carefully vetted based on engagement rates content quality.</p>
+                            </div>
+                            <div class="what-do-info-list">
+                                <ul>
+                                    <li>Brand Partnerships</li>
+                                    <li>Campaigns</li>
+                                </ul>
+                            </div>
+                            <div class="readmore-btn">
+                                <a href="contact.html">
+                                    <img src="images/arrow-white.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- What Do Info Box End -->
+                    </div>
+                    <!-- What We Do Content End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- What We Do Section End -->
+
+    <!-- Our Faqs Section Start -->
+    <div class="our-faqs bg-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <!-- Faq Image Start -->
+                    <div class="faq-image wow fadeInUp" data-wow-delay="0.2s">
+                        <!-- Faq Image Start -->
+                        <div class="faq-img">
+                            <figure class="image-anime">
+                                <img src="images/faq-image.jpg" alt="">
+                            </figure>
+                        </div>
+                        <!-- Faq Image End -->
+
+                        <!-- Faq CTA Box Start -->
+                        <div class="faq-cta-box">
+                            <div class="icon-box">
+                                <img src="images/icon-headphone.svg" alt="">
+                            </div>
+                            <div class="faq-cta-content">
+                                <h3>Have Any Question?</h3>
+                                <p><a href="tel:+132465789">+(132) 465 789</a></p>
+                            </div>
+                        </div>
+                        <!-- Faq CTA Box End -->
+                    </div>
+                    <!-- Faq Image End -->
+                </div>
+
+                <div class="col-lg-6">
+                    <!-- Faqs Content Start -->
+                    <div class="faqs-content">
+                        <!-- Section Title Start -->
+                        <div class="section-title">
+                            <h3 class="wow fadeInUp">FAQ's</h3>
+                            <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Your questions, <span>our answer</span></h2>
+                        </div>
+                        <!-- Section Title End -->
+
+                        <!-- FAQ Accordion Start -->
+                        <div class="faq-accordion" id="accordion">
+                            <!-- FAQ Item Start -->
+                            <div class="accordion-item wow fadeInUp">
+                                <h2 class="accordion-header" id="heading1">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                        1. What is influencer marketing?
+                                    </button>
+                                </h2>
+                                <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#accordion">
+                                    <div class="accordion-body">
+                                        <p>We run campaigns on Instagram, YouTube, TikTok, Facebook, Twitter, and LinkedIn — depending on your goals and audience.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FAQ Item End -->
+
+                            <!-- FAQ Item Start -->
+                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.2s">
+                                <h2 class="accordion-header" id="heading2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                        2. What platforms do you support?
+                                    </button>
+                                </h2>
+                                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordion">
+                                    <div class="accordion-body">
+                                        <p>We run campaigns on Instagram, YouTube, TikTok, Facebook, Twitter, and LinkedIn — depending on your goals and audience.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FAQ Item End -->
+
+                            <!-- FAQ Item Start -->
+                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
+                                <h2 class="accordion-header" id="heading3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                        3. How do you measure campaign success?
+                                    </button>
+                                </h2>
+                                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordion">
+                                    <div class="accordion-body">
+                                        <p>We run campaigns on Instagram, YouTube, TikTok, Facebook, Twitter, and LinkedIn — depending on your goals and audience.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FAQ Item End -->
+
+                            <!-- FAQ Item Start -->
+                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.6s">
+                                <h2 class="accordion-header" id="heading4">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                        4. Can I review content before it goes live?
+                                    </button>
+                                </h2>
+                                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordion">
+                                    <div class="accordion-body">
+                                        <p>We run campaigns on Instagram, YouTube, TikTok, Facebook, Twitter, and LinkedIn — depending on your goals and audience.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FAQ Item End -->
+                        </div>
+                        <!-- FAQ Accordion End -->
+                    </div>
+                    <!-- Faqs Content End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Faqs Section End -->
+
+    <!-- Our Scrolling Ticker Start -->
+    <div class="our-scrolling-ticker">
+        <!-- Scrolling Ticker Start -->
+        <div class="scrolling-ticker-box">
+            <div class="scrolling-content">
+                <span><img src="images/asterisk-icon.svg" alt="">Real Results</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Brand Growth</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Social Buzz</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Real Results</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Brand Growth</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Social Buzz</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Real Results</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Brand Growth</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Social Buzz</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Real Results</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Brand Growth</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Social Buzz</span>
+            </div>
+
+            <div class="scrolling-content">
+                <span><img src="images/asterisk-icon.svg" alt="">Real Results</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Brand Growth</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Social Buzz</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Real Results</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Brand Growth</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Social Buzz</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Real Results</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Brand Growth</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Social Buzz</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Real Results</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Brand Growth</span>
+                <span><img src="images/asterisk-icon.svg" alt="">Social Buzz</span>
+            </div>
+        </div>
+        <!-- Scrolling Ticker End -->
+    </div>
+    <!-- Our Scrolling Ticker End -->
+
+    <!-- Our Testimonials Section Start -->
+    <div class="our-testimonials">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-md-6">
+                    <!-- Testimonials Content Box Start -->
+                    <div class="testimonials-content">
+                        <!-- Section Title Start -->
+                        <div class="section-title">
+                            <h3 class="wow fadeInUp">Testimonials</h3>
+                            <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">What our clients say about our work</h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.4s">We let our results speak through the voices of our clients. From startups to global brands, our partners share how our influencer marketing strategies helped them grow.</p>
+                        </div>
+                        <!-- Section Title End -->
+
+                        <!-- Testimonial Button Start -->
+                        <div class="testimonial-btn wow fadeInUp" data-wow-delay="0.6s">
+                            <a href="testimonials.html" class="btn-default">view all reviews</a>
+                        </div>
+                        <!-- Testimonial Button End -->
+                    </div>
+                    <!-- Testimonial Content Box End -->
+                </div>
+
+                <div class="col-lg-5 col-md-6">
+                    <!-- Testimonial Image Start -->
+                    <div class="testimonial-image wow fadeInUp" data-wow-delay="0.2s">
+                        <figure>
+                            <img src="images/testimonial-image.png" alt="">
+                        </figure>
+                    </div>
+                    <!-- Testimonial Image End -->
+                </div>
+
+                <div class="col-lg-12">
+                    <!-- Testimonial Slider Start -->
+                    <div class="testimonial-slider">
+                        <div class="swiper">
+                            <div class="swiper-wrapper" data-cursor-text="Drag">
+                                <!-- Testimonial Slide Start -->
+                                <div class="swiper-slide">
+                                    <div class="testimonial-item">
+                                        <div class="testimonial-item-content">
+                                            <h3>“Our campaign reached over 2 million people in just 10 days! The team made influencer collaboration effortless and results-driven Working with this platform helped us grow brand awareness and sales faster paid ad strategy final reporting, everything was seamless we'll definitely partner again!”</h3>
+                                        </div>
+                                        <div class="author-content">
+                                            <h3>Samantha Lee</h3>
+                                            <p>Head of Influencer</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Testimonial Slide End -->
+                                
+                                <!-- Testimonial Slide Start -->
+                                <div class="swiper-slide">
+                                    <div class="testimonial-item">
+                                        <div class="testimonial-item-content">
+                                            <h3>“Our campaign reached over 3 million people in just 10 days! The team made influencer collaboration effortless and results-driven Working with this platform helped us grow brand awareness and sales faster paid ad strategy final reporting, everything was seamless we'll definitely partner again!”</h3>
+                                        </div>
+                                        <div class="author-content">
+                                            <h3>Theresa Webb</h3>
+                                            <p>Senior Influencer Manager</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Testimonial Slide End -->
+
+                                <!-- Testimonial Slide Start -->
+                                <div class="swiper-slide">
+                                    <div class="testimonial-item">
+                                        <div class="testimonial-item-content">
+                                            <h3>“Our campaign reached over 4 million people in just 10 days! The team made influencer collaboration effortless and results-driven Working with this platform helped us grow brand awareness and sales faster paid ad strategy final reporting, everything was seamless we'll definitely partner again!”</h3>
+                                        </div>
+                                        <div class="author-content">
+                                            <h3>Darrell Steward</h3>
+                                            <p>Influencer Coordinator</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Testimonial Slide End -->
+                            </div>
+                            <div class="testimonial-pagination"></div>
+                        </div>
+                    </div>
+                    <!-- Testimonial Slider End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Testimonials Section End -->
 @endsection

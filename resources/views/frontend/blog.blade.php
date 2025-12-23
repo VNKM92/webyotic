@@ -56,7 +56,7 @@
 
                         <!-- Post Read More Button Start -->
                         <div class="readmore-btn">
-                            <a href="{{url('blog').'/'.$post->slug}}"><img src="{{ $post->image ?? 'images/post-1.jpg' }}" alt="{{ $post->title }}"></a>
+                            <a href="{{url('blog').'/'.$post->slug}}"><img src="images/arrow-white.svg" alt="{{ $post->title }}"></a>
 
                         </div>
                         <!-- Post Read More Button End -->

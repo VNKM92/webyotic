@@ -1,12 +1,12 @@
 @extends('frontend.layouts.app')
 
 @section('content')
-@if(!empty($page?->content))
+{{-- @if(!empty($page?->content))
 <section class="py-12 bg-white">
     <div class="container mx-auto px-4 max-w-screen-xl prose prose-slate">
         {!! $page->content !!}
     </div>
-</section>
+</section> --}}
 @endif
 <!-- Page Header Start -->
     <div class="page-header">

@@ -75,7 +75,7 @@
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
                     <!-- Logo Start -->
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="{{ route('home') }}">
                         {{-- <img src="images/logo.svg" alt="Logo"> --}}
                         <h2>Webyotic</h2>
                     </a>
@@ -85,8 +85,8 @@
                     <div class="collapse navbar-collapse main-menu">
                         <div class="nav-menu-wrapper">
                             <ul class="navbar-nav mr-auto" id="menu">
-                                <li class="nav-item submenu"><a class="nav-link" href="{{ route('home') }}">Home</a>
-                                    {{-- <ul>
+                                <li class="nav-item "><a class="nav-link" href="{{ route('home') }}">Home</a>
+                                    {{-- <ul> submenu
                                         <li class="nav-item"><a class="nav-link" href="index-2.html">Home - Main</a>
                                         </li>
                                         <li class="nav-item"><a class="nav-link" href="index-image.html">Home -
@@ -129,7 +129,7 @@
 
                         <!-- Header Btn Start -->
                         <div class="header-btn">
-                            <a href="contact.html" class="btn-default">Get Started Now</a>
+                            <a href="{{url('contact') }}" class="btn-default">Get Started Now</a>
                         </div>
                         <!-- Header Btn End -->
                     </div>

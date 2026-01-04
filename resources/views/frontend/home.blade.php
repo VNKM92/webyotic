@@ -18,8 +18,11 @@
                         <!-- Section Title Start -->
                         <div class="section-title">
                             <h3>Welcome to Webyotic</h3>
-                            <h1 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Grow faster with influencer marketing</h1>
-                            <p class="wow fadeInUp" data-wow-delay="0.4s">Partner with trusted influencers to expand your reach, boost engagement, and drive conversions platform connects your brand with voices to accelerate growth.</p>
+                            <h1 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque"> {!! $page->title !!}</h1>
+                            <p class="wow fadeInUp" data-wow-delay="0.4s">@if(!empty($page?->content))
+                                {!! $page->content !!}
+                                @endif
+                            </p>
                         </div>
                         <!-- Section Title End -->
 

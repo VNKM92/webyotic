@@ -7,8 +7,6 @@
         {!! $page->content !!}
     </div>
 @endif --}}
-
-
 <!-- Page Header Start -->
     <div class="page-header">
         <div class="container">
